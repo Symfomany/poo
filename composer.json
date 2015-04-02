@@ -1,0 +1,9 @@
+{
+    "name": "symfomany/poo",
+    "license": "MIT",
+    "type": "project",
+    "description": "Learn POO Best Practises By Symfomany",
+    "autoload": {
+        "psr-4": { "": "classes/"}
+    }
+}
