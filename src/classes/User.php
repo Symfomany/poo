@@ -26,6 +26,18 @@ class User extends AbstractUser {
      */
     protected $enabled;
 
+
+    /**
+     * Pays
+     */
+    const pays = "France";
+
+
+    /**
+     * Formation
+     */
+    const formation = "3W Academy";
+
     /**
      * Constructeur
      * @param $prenom
@@ -112,13 +124,30 @@ class User extends AbstractUser {
 
     public function getEnabled()
     {
-        // TODO: Implement getEnabled() method.
+        return $this->enabled;
     }
 
     public function setEnabled($enabled)
     {
-        // TODO: Implement setEnabled() method.
+       $this->enabled = $enabled;
     }
 
+    /**
+     * Pays
+     * @return string
+     */
+    static public function getPays(){
+
+        return "Tous les utilisteurs viennent de ". self::pays;
+    }
+
+    /**
+     * Etudes
+     * @return string
+     */
+    static public function getFormation(){
+
+        return "Tous les utilisteurs proviennent de la ". self::formation;
+    }
 
 }

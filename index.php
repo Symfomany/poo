@@ -12,9 +12,11 @@
      */
 
     // Inclusions faite par Composer
-    include "classes/User.php";
-    include "classes/Editeur.php";
-    include "classes/Administrateur.php";
+    //include "classes/User.php";
+    //include "classes/Editeur.php";
+    //include "classes/Administrateur.php";
+
+    require_once __DIR__.'/vendor/autoload.php';
 
     //require_once "vendor/autoload.php"; => a faire avec Composer et UniversalLoader
 
@@ -33,8 +35,8 @@
     echo "<h3>Noms: </h3>";
 
 
-    echo $user1->getNom(). "<br />";
-    echo $user2->getNom(). "<br />";
+    echo bold($user1->getNom()). "<br />";
+    echo bold($user2->getNom()). "<br />";
 
 
     echo "<h3>Prenoms: </h3>";
@@ -51,6 +53,15 @@
     echo $user2->repond($user1, "Remarque le tient n'est pas très grand"). "<br />";
 
     echo $user1->noter(4);
+
+    echo beautiful(User::getPays());
+
+    echo Format::slugify(User::getFormation());
+
+    //sans argument si j'ai rien a lui donner
+    $satanize = new Util;
+
+    echo beautiful($satanize->camelize("Test Alpha 3W-Academy"));
 
 
     echo "<hr />";

@@ -3,7 +3,20 @@
     "license": "MIT",
     "type": "project",
     "description": "Learn POO Best Practises By Symfomany",
+    "keywords": ["POO", "PHP"],
+    "homepage": "https://github.com/Symfomany/poo/",
+    "authors": [
+        {
+            "name": "Boyer Julien",
+            "email": "julien@meetserious.com"
+        }
+    ],
     "autoload": {
-        "psr-4": { "": "classes/"}
+        "psr-4": { "": "src/"},
+        "files": ["helpers/custom_helpers.php"],
+        "classmap": ["lib"]
+    },
+    "require": {
+        "php": ">=5.3.3"
     }
 }
