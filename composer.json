@@ -17,6 +17,12 @@
         "classmap": ["lib"]
     },
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=5.3.3",
+        "symfony/debug": "dev-master",
+        "symfony/console": "dev-master",
+        "symfony/filesystem": "dev-master",
+        "symfony/http-foundation": "dev-master",
+        "symfony/yaml": "dev-master"
+
     }
 }

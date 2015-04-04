@@ -23,11 +23,21 @@
         require_once __DIR__.'/vendor/autoload.php';
 
         // USE des classes dont j'ai besoin pour instancier
-        use classes\User;
-        use classes\Editeur;
-        use classes\Administrateur;
-        use classes\Moderateur;
+        use App\User;
+        use App\Editeur;
+        use App\Administrateur;
+        use App\Moderateur;
 
+        //use debug SYmfony 2
+        use Symfony\Component\Debug\Debug;
+        use Symfony\Component\Debug\ErrorHandler;
+        use Symfony\Component\Debug\ExceptionHandler;
+
+
+        // Initialize Debugging by SYmfony 2...
+        Debug::enable();
+        ErrorHandler::register();
+        ExceptionHandler::register();
 
         echo "<h2>Utilisateurs </h2>";
 
@@ -35,6 +45,8 @@
         //instanciation : création de 2 objets User
         $user1 = new User('Vincent', 'Phillippe');
         $user2 = new User('Elodie', 'Perrotton');
+
+        //var_dump($user1);
 
         // une constante d'appel depuis un objet de la clase
         echo beautiful($user1::PAYS). "<br />";
@@ -205,6 +217,10 @@
         $moderateur1->getCaracteristiques();
         $editeur1->getCaracteristiques();
         $editeur2->getCaracteristiques();
+
+
+
+
 
         ?>
 
