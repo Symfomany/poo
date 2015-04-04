@@ -1,6 +1,8 @@
 <?php
 
 namespace classes;
+
+
 use classes\Interfaces\ActivationInterface;
 use classes\Interfaces\InscriptionInterface;
 
@@ -40,6 +42,12 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
      * @var
      */
     protected $enabled;
+
+
+    /**
+     * Type de personnes
+     */
+    const TYPE = "Humain";
 
 
     /**
@@ -191,5 +199,21 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
         // TODO: Implement setDateUpdated() method.
     }
 
+
+    /**
+     * Get all caracteristiques
+     */
+    public function getCaracteristiques(){
+        echo "<h3>Toutes les caractéristiques de ".$this->nom."</h3>";
+
+        echo "<ul>";
+
+        foreach ($this as $attribut => $valeur)
+        {
+            echo '<li><strong>', $attribut, '</strong> => ', $valeur, '</li>';
+        }
+
+        echo "</ul>";
+    }
 
 }

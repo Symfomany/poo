@@ -2,8 +2,6 @@
 
 namespace classes;
 
-use classes\Editeur;
-
 /**
  * Class Administrateur
  * @package classes

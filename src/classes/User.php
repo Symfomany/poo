@@ -28,15 +28,21 @@ class User extends AbstractUser {
 
 
     /**
-     * Pays
+     * Constante Pays
      */
-    const pays = "France";
+    const PAYS = "France";
 
 
     /**
-     * Formation
+     * Constante Formation
      */
-    const formation = "3W Academy";
+    const FORMATION = "3W Academy";
+
+
+    /**
+     * Attributs statique
+     */
+    private static $langue = "Français";
 
     /**
      * Constructeur
@@ -138,7 +144,7 @@ class User extends AbstractUser {
      */
     static public function getPays(){
 
-        return "Tous les utilisteurs viennent de ". self::pays;
+        return "Tous les utilisteurs viennent de ". self::PAYS;
     }
 
     /**
@@ -147,7 +153,41 @@ class User extends AbstractUser {
      */
     static public function getFormation(){
 
-        return "Tous les utilisteurs proviennent de la ". self::formation;
+        return "Tous les utilisteurs proviennent de la ". self::FORMATION;
     }
+
+    /**
+     * Etudes
+     * @return string
+     */
+    static public function getLangue(){
+
+        return "Tous les utilisteurs parle ". self::$langue;
+    }
+
+
+    /**
+     * Magic Setter
+     * @param $nom
+     * @param $valeur
+     */
+    public function __set($nom, $valeur)
+    {
+        $this->attributs[$nom] = $valeur;
+    }
+
+    /**
+     * Magic Getter
+     * @param $nom
+     * @return mixed
+     */
+    public function __get($nom)
+    {
+        if (isset($this->attributs[$nom]))
+        {
+            return $this->attributs[$nom];
+        }
+    }
+
 
 }
