@@ -57,6 +57,12 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
+/**
+ * Use StopWatch SYmfony2
+ */
+use Symfony\Component\Stopwatch\Stopwatch;
+
+
 
 /**
  * Using CSS Selector
@@ -75,7 +81,8 @@ ErrorHandler::register();
 ExceptionHandler::register();
 
 
-
+$stopwatch = new Stopwatch();
+$stopwatch->start('go');
 
 
 /**
@@ -218,8 +225,17 @@ $crawler = $crawler->filterXPath($xpathelement);
 foreach ($crawler as $domElement) {
     var_dump($domElement->nodeName);
 }
+$event = $stopwatch->stop('go');
+echo "<h3>Metrix de l'applicaton</h3>";
 
-
+echo  "<code'>";
+echo    "<p>Category: ".$event->getCategory()." </p>";   // Returns the category the event was started in
+echo    "<p>Origin: ".$event->getOrigin()."ms. </p>";     // Returns the event start time in milliseconds
+echo    "<p>Debut: ".$event->getStartTime()."ms. </p>";  // Returns the start time of the very first period
+echo    "<p>Fin: ".$event->getEndTime()."ms. </p>";    // Returns the end time of the very last period
+echo    "<p>Duration: ".$event->getDuration()."ms. </p>";   // Returns the event duration, including all periods
+echo    "<p>Memoire: ".$event->getMemory()."Mb. </p>";     // Returns the max memory usage of all periods
+echo  "</code>";
 /**
  * Using Filesystem
  */

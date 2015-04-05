@@ -725,5 +725,57 @@
             "logging",
             "psr-3"
         ]
+    },
+    {
+        "name": "symfony/stopwatch",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "target-dir": "Symfony/Component/Stopwatch",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/Stopwatch.git",
+            "reference": "bae98f9404e96f48e5e89f2fd3bb3f2dce52e431"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/Stopwatch/zipball/bae98f9404e96f48e5e89f2fd3bb3f2dce52e431",
+            "reference": "bae98f9404e96f48e5e89f2fd3bb3f2dce52e431",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9"
+        },
+        "require-dev": {
+            "symfony/phpunit-bridge": "~2.7|~3.0"
+        },
+        "time": "2015-03-24 17:09:17",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.0-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Symfony\\Component\\Stopwatch\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Symfony Community",
+                "homepage": "http://symfony.com/contributors"
+            },
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            }
+        ],
+        "description": "Symfony Stopwatch Component",
+        "homepage": "http://symfony.com"
     }
 ]

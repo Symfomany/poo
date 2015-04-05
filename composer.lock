@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1df9ea743e05fc932d4dd41820b68ad1",
+    "hash": "fed262e1052f37bc5f0613a72b5a3149",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -658,6 +658,56 @@
             "time": "2015-04-02 12:09:49"
         },
         {
+            "name": "symfony/stopwatch",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Stopwatch",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Stopwatch.git",
+                "reference": "bae98f9404e96f48e5e89f2fd3bb3f2dce52e431"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Stopwatch/zipball/bae98f9404e96f48e5e89f2fd3bb3f2dce52e431",
+                "reference": "bae98f9404e96f48e5e89f2fd3bb3f2dce52e431",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7|~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Stopwatch\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Stopwatch Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-03-24 17:09:17"
+        },
+        {
             "name": "symfony/yaml",
             "version": "dev-master",
             "target-dir": "Symfony/Component/Yaml",
@@ -723,7 +773,8 @@
         "symfony/dependency-injection": 20,
         "symfony/css-selector": 20,
         "symfony/dom-crawler": 20,
-        "monolog/monolog": 20
+        "monolog/monolog": 20,
+        "symfony/stopwatch": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

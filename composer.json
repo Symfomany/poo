@@ -29,7 +29,8 @@
         "symfony/dependency-injection": "dev-master",
         "symfony/css-selector": "dev-master",
         "symfony/dom-crawler": "dev-master",
-        "monolog/monolog": "dev-master"
+        "monolog/monolog": "dev-master",
+        "symfony/stopwatch": "dev-master"
 
     }
 }
