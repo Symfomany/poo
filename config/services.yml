@@ -1,0 +1,9 @@
+parameters:
+    # ...
+    user.nom: Perrotton
+    user.prenom: Elodie
+
+services:
+    user.elodie:
+        class:     App\User
+        arguments: ["%user.nom%", "%user.prenom%"]
