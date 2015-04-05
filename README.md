@@ -59,7 +59,7 @@ $ php bin/vendors install
 
 
 
-11 Symfony Components used
+12 Symfony Components used
 ------------------
 
 * Debug Component
@@ -73,3 +73,4 @@ $ php bin/vendors install
 * Dependency Injection Component
 * Css Selector Component
 * Dom Crawler Component
+* Monolog Component

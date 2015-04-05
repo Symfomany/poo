@@ -50,6 +50,13 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
+/**
+ * Use log for tracing app
+ */
+
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
 
 /**
  * Using CSS Selector
@@ -84,6 +91,18 @@ $session->set('nb', $nb);
 
 $nbnew = $session->get('nb');
 var_dump($nbnew);
+
+
+/**
+ * Use Log
+ */
+// create a log channel
+$log = new Logger('name');
+$log->pushHandler(new StreamHandler('logs/dev.log', Logger::WARNING));
+
+// add records to the log
+$log->addWarning('Coucou');
+$log->addError('3WA Powaaa!!!');
 
 
 /**

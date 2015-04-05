@@ -28,7 +28,8 @@
         "symfony/config": "dev-master",
         "symfony/dependency-injection": "dev-master",
         "symfony/css-selector": "dev-master",
-        "symfony/dom-crawler": "dev-master"
+        "symfony/dom-crawler": "dev-master",
+        "monolog/monolog": "dev-master"
 
     }
 }
