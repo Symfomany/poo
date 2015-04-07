@@ -27,6 +27,7 @@
         use App\Editeur;
         use App\Administrateur;
         use App\Moderateur;
+//        use Exceptions\CustomException;
 
         //use debug SYmfony 2
         use Symfony\Component\Debug\Debug;
@@ -41,6 +42,42 @@
 
         echo "<h2>Utilisateurs </h2>";
 
+
+//        throw new CustomException(502,'coucou');
+
+        /**
+         * Manipulation des dates avec Datetime
+         */
+
+        $datenow = new \Datetime('now');
+        echo "Date du jour : ".$datenow->format('d/m/Y');
+
+        echo "<br />";
+
+        $dateyesterday = $datenow->modify('-1 day');
+        echo "Date d'y hier : ".$datenow->format('d/m/Y');
+
+        echo "<br />";
+
+        $dateweek = $datenow->modify('-1 week');
+        echo "Date il y a 1 semaine : ".$dateweek->format('d/m/Y');
+
+        echo "<br />";
+
+        $datemonth = $datenow->modify('+ 2  month');
+        echo "Date dans 2 mois : ".$datemonth->format('d/m/Y');
+
+        echo "<br />";
+
+        $dateyear = $datenow->modify('+ 1  year');
+        echo "Date dans 1 an : ".$dateyear ->format('d/m/Y');
+
+        echo "<br />";
+
+
+//        $date = new \DateTime('06/01/2014');
+        $date = \DateTime::createFromFormat('d/m/Y','06/01/2014');
+        echo "Date ".$date ->format('d/m/Y');
 
         //instanciation : création de 2 objets User
         $user1 = new User('Vincent', 'Phillippe');
@@ -60,6 +97,10 @@
         // appel d'un helper bold() comme beautiful() en dessus en affichant le nom de chaque utilisateur
         echo bold($user1->getNom()). "<br />";
         echo bold($user2->getNom()). "<br />";
+
+        $user1->setEnabled(0);
+
+        echo beautiful("L'utilisateur ".$user1->getNom()." est inactif");
 
 
         echo "<h3>Prenoms: </h3>";

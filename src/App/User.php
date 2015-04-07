@@ -103,7 +103,7 @@ class User extends AbstractUser {
      * @param $message
      * @return string
      */
-    public function repond(User $user, $message){
+    public function repond(User $user, $message = "Aucun message"){
 
         return $this->prenom. " ". $this->nom  ." a  répondu à la réaction de ".$user->nom." ". $user->prenom . ": ".$message;
     }
@@ -113,7 +113,7 @@ class User extends AbstractUser {
      * @param $note
      * @return string
      */
-    public function noter($note){
+    public function noter($note = 4){
 
         return $this ." a noté: ".$note;
     }
@@ -128,11 +128,18 @@ class User extends AbstractUser {
     }
 
 
+    /**
+     * @return mixed
+     */
     public function getEnabled()
     {
         return $this->enabled;
     }
 
+    /**
+     * @param $enabled
+     * @return mixed|void
+     */
     public function setEnabled($enabled)
     {
        $this->enabled = $enabled;

@@ -199,8 +199,13 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
         // TODO: Implement setDateUpdated() method.
     }
 
-
     /**
+     * To define echo $obj
+     * @return mixed
+     */
+    public abstract function __toString();
+
+        /**
      * Get all caracteristiques
      */
     public function getCaracteristiques(){

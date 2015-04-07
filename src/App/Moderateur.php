@@ -26,6 +26,8 @@ class Moderateur extends User {
     public function __construct($nom, $prenom, $niveau){
         parent::__construct($nom, $prenom);
         $this->niveau = $niveau;
+
+        //to handle 500 error
         if($niveau > 10){
             trigger_error('Le modérateur ne peut se voir un niveau supérieur à 10', E_USER_WARNING);
         }

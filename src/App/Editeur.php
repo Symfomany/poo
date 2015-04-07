@@ -85,9 +85,9 @@ class Editeur extends User {
      * @param $maisonpresse
      * @return string
      */
-    public function publier($article, $maisonpresse){
+    public function publier($article, $maisonpresse = "Le Monde"){
 
-        return "Je publie l'article " . $maisonpresse . " de presse dans la maison de presse "  . $maisonpresse;
+        return "Je publie l'article " . $article . " de presse dans la maison de presse "  . $maisonpresse;
     }
 
 

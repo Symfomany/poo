@@ -28,10 +28,8 @@ class Administrateur extends Editeur {
      * Constructeur
      */
     public function __construct($nom, $prenom, $edition = "", $biography = "",$avatar, $etoiles ){
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->edition = $edition;
-        $this->biography = $biography;
+
+        parent::__construct($nom, $prenom, $edition, $biography);
         $this->avatar = $avatar;
         $this->etoiles = $etoiles;
     }
