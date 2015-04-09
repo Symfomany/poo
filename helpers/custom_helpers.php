@@ -19,6 +19,10 @@ function bold($str){
     return "<b>".$str.'</b>';
 }
 
+/**
+ * @param $str
+ * @return string
+ */
 function italic($str){
 
     return "<i>".$str."</i>";

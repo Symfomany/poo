@@ -1,5 +1,5 @@
 <?php
-namespace App\Interfaces;
+namespace Application\Interfaces;
 
 /**
  * Interface InscriptionInterface

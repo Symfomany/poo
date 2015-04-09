@@ -1,14 +1,12 @@
 <?php
 
-namespace App;
+namespace Application;
 
 /**
  * Class Administrateur
  * @package classes
  */
 class Administrateur extends Editeur {
-
-
 
     /**
      * Image d'Avatar

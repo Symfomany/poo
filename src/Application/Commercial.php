@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Application;
 
 /**
  * Class Commercial
@@ -31,8 +31,6 @@ class Commercial extends User {
         $this->pointdevente = $pointdevente;
         $this->experience = $experience;
     }
-
-
 
     /**
      * @return mixed

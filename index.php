@@ -23,11 +23,84 @@
         require_once __DIR__.'/vendor/autoload.php';
 
         // USE des classes dont j'ai besoin pour instancier
-        use App\User;
-        use App\Editeur;
-        use App\Administrateur;
-        use App\Moderateur;
-//        use Exceptions\CustomException;
+        use Application\User;
+        use Application\Editeur;
+        use Application\Commercial;
+        use Application\Administrateur;
+        use Application\Moderateur;
+        use Application\Ecrivain;
+
+        use Libraries\User as UserLib;
+
+
+        $userlib = new UserLib("juju", "pass");
+
+
+        //je créer un objet datetime instancié à la date d'aujourd'hui
+        $date = new \Datetime('now');
+        // j'affiche la datre au format d/m/Y
+        echo $date->format('d/m/Y');
+
+        echo "<br />";
+
+        $date->modify('+1 day');
+        echo $date->format('d/m/Y');
+
+        echo "<br />";
+
+        $date->modify('+3 month');
+        echo $date->format('d/m/Y');
+
+        echo "<br />";
+
+        $date->modify('+1 year');
+        echo $date->format('d/m/Y');
+
+        echo "<br />";
+
+        $date->modify('+1 year -3 month');
+        echo $date->format('d');
+
+        //
+
+        //        $date = new \DateTime('06/01/2014');
+        $datefrom = \DateTime::createFromFormat('d/m/Y','06/01/2014');
+        echo "Date ".$datefrom ->format('Y-m-d');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //use debug SYmfony 2
         use Symfony\Component\Debug\Debug;
@@ -43,7 +116,7 @@
         echo "<h2>Utilisateurs </h2>";
 
 
-//        throw new CustomException(502,'coucou');
+        //throw new CustomException(404,'coucou');
 
         /**
          * Manipulation des dates avec Datetime
@@ -86,7 +159,7 @@
         //var_dump($user1);
 
         // une constante d'appel depuis un objet de la clase
-        echo beautiful($user1::PAYS). "<br />";
+        echo beautiful($user1->getNom()). "<br />";
         echo beautiful($user1::FORMATION). "<br />";
 
         // un attribut static s'appel depuis la classe
@@ -147,7 +220,9 @@
         echo $editeur1->getPrenom(). "<br />";
         echo $editeur2->getPrenom(). "<br />";
 
+        echo "<h3>Réactions</h3>";
 
+        echo $user1->repond($editeur1, "Il ne me plait pas beaucoups le nain de jardin!"). "<br />";
 
         echo "<h3>Maison Editions: </h3>";
 

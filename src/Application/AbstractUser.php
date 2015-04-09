@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace Application;
 
 
-use App\Interfaces\ActivationInterface;
-use App\Interfaces\InscriptionInterface;
+use Application\Interfaces\ActivationInterface;
+use Application\Interfaces\InscriptionInterface;
 
 /**
  * Class AbstractUser

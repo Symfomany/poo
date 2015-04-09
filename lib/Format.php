@@ -1,9 +1,10 @@
 <?php
 
+use \Application\Commercial;
 /**
  * Class Format
  */
-class Format{
+class Format extends Commercial{
 
 
     /**
