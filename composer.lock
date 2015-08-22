@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Symfomany/canicule.git",
-                "reference": "7fdbd0d02f95350d1ccb98048cbed72e669d54d4"
+                "reference": "cab594a6efa609cc844a06b454697fba86df4c61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symfomany/canicule/zipball/7fdbd0d02f95350d1ccb98048cbed72e669d54d4",
-                "reference": "7fdbd0d02f95350d1ccb98048cbed72e669d54d4",
+                "url": "https://api.github.com/repos/Symfomany/canicule/zipball/cab594a6efa609cc844a06b454697fba86df4c61",
+                "reference": "cab594a6efa609cc844a06b454697fba86df4c61",
                 "shasum": ""
             },
             "require": {
@@ -39,12 +39,12 @@
                     "email": "julien@meetserious.com"
                 }
             ],
-            "description": "SUper Classe :)",
+            "description": "super Classe :)",
             "keywords": [
                 "3WA",
                 "Canicule"
             ],
-            "time": "2015-08-20 15:40:30"
+            "time": "2015-08-22 10:33:59"
         }
     ],
     "packages-dev": [],
