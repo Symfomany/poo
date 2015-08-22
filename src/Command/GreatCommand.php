@@ -1,4 +1,5 @@
 <?php
+
 namespace Command;
 
 use Symfony\Component\Console\Command\Command;
@@ -8,8 +9,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Class GreatCommand
- * @package Command
+ * Class GreatCommand.
  */
 class GreatCommand extends Command
 {
@@ -48,8 +48,8 @@ class GreatCommand extends Command
             $text = strtoupper($text);
         }
 
-        $output->writeln("<info>Premiere test de ligne de commande</info>");
-        $output->writeln("<comment>".$text."</comment>");
-        $output->writeln("<question>Satisfait ou remboursé ?!</question>");
+        $output->writeln('<info>Premiere test de ligne de commande</info>');
+        $output->writeln('<comment>'.$text.'</comment>');
+        $output->writeln('<question>Satisfait ou remboursé ?!</question>');
     }
 }

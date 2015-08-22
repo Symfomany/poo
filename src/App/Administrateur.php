@@ -31,6 +31,8 @@ class Administrateur extends Editeur
         $this->etoiles = $etoiles;
     }
 
+
+
     /**
      * @return mixed
      */

@@ -3,31 +3,32 @@
 namespace Application;
 
 /**
- * Class Commercial
- * @package classes
+ * Class Commercial.
  */
-class Commercial extends User {
-
-
+class Commercial extends User
+{
     /**
-     * Point de vente
+     * Point de vente.
+     *
      * @var
      */
     protected $pointdevente;
 
     /**
-     * Experience
+     * Experience.
+     *
      * @var
      */
     protected $experience;
 
-
     /**
-     * Constructeur
+     * Constructeur.
+     *
      * @param $pointdevente
      * @param $experience
      */
-    public function __construct($pointdevente, $experience){
+    public function __construct($pointdevente, $experience)
+    {
         $this->pointdevente = $pointdevente;
         $this->experience = $experience;
     }
@@ -65,16 +66,14 @@ class Commercial extends User {
     }
 
     /**
-     * Vendre un article
+     * Vendre un article.
+     *
      * @param $article
+     *
      * @return string
      */
-    public function vendre($article){
-
-        return "Je vend l'article " . $article . "  dans le centre commercial "  . $this->pointdevente;
+    public function vendre($article)
+    {
+        return "Je vend l'article ".$article.'  dans le centre commercial '.$this->pointdevente;
     }
-
-
-
-
-} 
+}

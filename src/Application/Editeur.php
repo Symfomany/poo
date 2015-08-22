@@ -3,33 +3,34 @@
 namespace Application;
 
 /**
- * Class Editeur
- * @package classes
+ * Class Editeur.
  */
-class Editeur extends User {
-
-
+class Editeur extends User
+{
     /**
-     * Maison Edition
+     * Maison Edition.
+     *
      * @var
      */
     protected $edition;
 
     /**
-     * Biography
+     * Biography.
+     *
      * @var
      */
     protected $biography;
 
-
     /**
-     * Constructeur
+     * Constructeur.
+     *
      * @param $nom
      * @param $prenom
      * @param $edition
      * @param $biography
      */
-    public function __construct($nom, $prenom, $edition, $biography){
+    public function __construct($nom, $prenom, $edition, $biography)
+    {
         parent::__construct($nom, $prenom);
         $this->edition = $edition;
         $this->biography = $biography;
@@ -67,30 +68,28 @@ class Editeur extends User {
         $this->edition = $edition;
     }
 
-
     /**
-     * Editer un article
+     * Editer un article.
+     *
      * @param $article
+     *
      * @return string
      */
-    public function editer($article){
-
-        return "J'edite un article " . $article . " de presse...";
+    public function editer($article)
+    {
+        return "J'edite un article ".$article.' de presse...';
     }
 
-
     /**
-     * Publier un article
+     * Publier un article.
+     *
      * @param $article
      * @param $maisonpresse
+     *
      * @return string
      */
-    public function publier($article, $maisonpresse = "Le Monde"){
-
-        return "Je publie l'article " . $article . " de presse dans la maison de presse "  . $maisonpresse;
+    public function publier($article, $maisonpresse = 'Le Monde')
+    {
+        return "Je publie l'article ".$article.' de presse dans la maison de presse '.$maisonpresse;
     }
-
-
-
-
-} 
+}

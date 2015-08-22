@@ -2,64 +2,65 @@
 
 namespace Application;
 
-
 use Application\Interfaces\ActivationInterface;
 use Application\Interfaces\InscriptionInterface;
 
 /**
- * Class AbstractUser
- * @package classes
+ * Class AbstractUser.
  */
-abstract class AbstractUser  implements ActivationInterface, InscriptionInterface {
-
-
+abstract class AbstractUser  implements ActivationInterface, InscriptionInterface
+{
     /**
-     * Nom
+     * Nom.
+     *
      * @var
      */
     protected $nom;
 
     /**
-     * Prenom
+     * Prenom.
+     *
      * @var
      */
     protected $prenom;
 
     /**
-     * Email
+     * Email.
+     *
      * @var
      */
     protected $email;
 
     /**
-     * Mdp
+     * Mdp.
+     *
      * @var
      */
     protected $mdp;
 
     /**
-     * Mdp
+     * Mdp.
+     *
      * @var
      */
     protected $enabled;
 
-
     /**
-     * Type de personnes
+     * Type de personnes.
      */
-    const TYPE = "Humain";
-
+    const TYPE = 'Humain';
 
     /**
      * @return mixed
      */
-    public abstract function getEnabled();
+    abstract public function getEnabled();
 
     /**
      * @param $enabled
+     *
      * @return mixed
      */
-    public abstract function setEnabled($enabled);
+    abstract public function setEnabled($enabled);
 
     /**
      * @return mixed
@@ -126,7 +127,8 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
     }
 
     /**
-     * Is Banned User
+     * Is Banned User.
+     *
      * @return mixed
      */
     public function getBanned()
@@ -136,6 +138,7 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
 
     /**
      * @param $banned
+     *
      * @return mixed
      */
     public function setBanned($banned)
@@ -144,7 +147,8 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
     }
 
     /**
-     * Is LOcked User
+     * Is LOcked User.
+     *
      * @return mixed
      */
     public function getLocked()
@@ -154,6 +158,7 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
 
     /**
      * @param $locked
+     *
      * @return mixed
      */
     public function setLocked($locked)
@@ -162,7 +167,8 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
     }
 
     /**
-     * Get DateTime when created User
+     * Get DateTime when created User.
+     *
      * @return mixed
      */
     public function getDateCreated()
@@ -171,8 +177,10 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
     }
 
     /**
-     * Set DateTime when created User
+     * Set DateTime when created User.
+     *
      * @param \DateTime $datetime
+     *
      * @return mixed
      */
     public function setDateCreated(\DateTime $datetime)
@@ -181,7 +189,8 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
     }
 
     /**
-     * Get DateTime when updated User
+     * Get DateTime when updated User.
+     *
      * @return mixed
      */
     public function getDateUpdated()
@@ -190,35 +199,38 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
     }
 
     /**
-     * Set DateTime when updated User
+     * Set DateTime when updated User.
+     *
      * @param \DateTime $datetime
+     *
      * @return mixed
      */
     public function setDateUpdated(\DateTime $datetime)
     {
+
         // TODO: Implement setDateUpdated() method.
     }
 
     /**
-     * To define echo $obj
+     * To define echo $obj.
+     *
      * @return mixed
      */
-    public abstract function __toString();
+    abstract public function __toString();
 
-        /**
-     * Get all caracteristiques
+    /**
+     * Get all caracteristiques.
      */
-    public function getCaracteristiques(){
-        echo "<h3>Toutes les caractéristiques de ".$this->nom."</h3>";
+    public function getCaracteristiques()
+    {
+        echo '<h3>Toutes les caractéristiques de '.$this->nom.'</h3>';
 
-        echo "<ul>";
+        echo '<ul>';
 
-        foreach ($this as $attribut => $valeur)
-        {
+        foreach ($this as $attribut => $valeur) {
             echo '<li><strong>', $attribut, '</strong> => ', $valeur, '</li>';
         }
 
-        echo "</ul>";
+        echo '</ul>';
     }
-
 }

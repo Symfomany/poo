@@ -3,59 +3,57 @@
 namespace Application;
 
 /**
- * Class Moderateur
- * @package classes
+ * Class Moderateur.
  */
-class Moderateur extends User {
-
-
+class Moderateur extends User
+{
     /**
-     * Niveau de modération
+     * Niveau de modération.
+     *
      * @var
      */
     protected $niveau;
 
-
     /**
-     * Constructeur
+     * Constructeur.
+     *
      * @param $nom
      * @param $prenom
      * @param $edition
      * @param $biography
      */
-    public function __construct($nom, $prenom, $niveau){
+    public function __construct($nom, $prenom, $niveau)
+    {
         parent::__construct($nom, $prenom);
         $this->niveau = $niveau;
 
         //to handle 500 error
-        if($niveau > 10){
+        if ($niveau > 10) {
             trigger_error('Le modérateur ne peut se voir un niveau supérieur à 10', E_USER_WARNING);
         }
     }
 
-
     /**
-     * Modérer un commentaire
+     * Modérer un commentaire.
+     *
      * @param $commentaire
+     *
      * @return string
      */
-    public function modererCommentaire($commentaire){
-
-        return $this->nom . " a modérer un commentaire: " . $commentaire;
+    public function modererCommentaire($commentaire)
+    {
+        return $this->nom.' a modérer un commentaire: '.$commentaire;
     }
-
 
     /**
-     * Moderer un utilisateur
+     * Moderer un utilisateur.
+     *
      * @param User $user
+     *
      * @return string
      */
-    public function modererUser(User $user){
-
-        return $this->nom." a modérer l'utilisateur " . $user;
+    public function modererUser(User $user)
+    {
+        return $this->nom." a modérer l'utilisateur ".$user;
     }
-
-
-
-
-} 
+}

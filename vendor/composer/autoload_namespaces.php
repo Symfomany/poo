@@ -6,17 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
-    'Symfony\\Component\\Stopwatch\\' => array($vendorDir . '/symfony/stopwatch'),
-    'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
-    'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
-    'Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
-    'Symfony\\Component\\Filesystem\\' => array($vendorDir . '/symfony/filesystem'),
-    'Symfony\\Component\\DomCrawler\\' => array($vendorDir . '/symfony/dom-crawler'),
-    'Symfony\\Component\\DependencyInjection\\' => array($vendorDir . '/symfony/dependency-injection'),
-    'Symfony\\Component\\Debug\\' => array($vendorDir . '/symfony/debug'),
-    'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
-    'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
-    'Symfony\\Component\\Config\\' => array($vendorDir . '/symfony/config'),
-    'Psr\\Log\\' => array($vendorDir . '/psr/log'),
+    '' => array($vendorDir . '/symfomany/canicule/src'),
 );

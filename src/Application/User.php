@@ -3,53 +3,54 @@
 namespace Application;
 
 /**
- * Class User
- * @package classes
+ * Class User.
  */
-class User extends AbstractUser {
-
+class User extends AbstractUser
+{
     /**
-     * Nom
+     * Nom.
+     *
      * @var
      */
     protected $nom;
 
     /**
-     * Prenom
+     * Prenom.
+     *
      * @var
      */
     protected $prenom;
 
     /**
-     * Enabled
+     * Enabled.
+     *
      * @var
      */
     protected $enabled;
 
-
     /**
-     * Constante Pays
+     * Constante Pays.
      */
-    const PAYS = "France";
-
+    const PAYS = 'France';
 
     /**
-     * Constante Formation
+     * Constante Formation.
      */
-    const FORMATION = "3W Academy";
-
+    const FORMATION = '3W Academy';
 
     /**
-     * Attributs statique
+     * Attributs statique.
      */
-    private static $langue = "Français";
+    private static $langue = 'Français';
 
     /**
-     * Constructeur
+     * Constructeur.
+     *
      * @param $prenom
      * @param $nom
      */
-    public function __construct($prenom, $nom){
+    public function __construct($prenom, $nom)
+    {
         $this->prenom = $prenom;
         $this->nom = $nom;
     }
@@ -86,47 +87,52 @@ class User extends AbstractUser {
         $this->nom = $nom;
     }
 
-
     /**
-     * Réagir  avec un commentaire
+     * Réagir  avec un commentaire.
+     *
      * @param $commentaire
+     *
      * @return string
      */
-    public function reagir($commentaire){
-
-        return $this->prenom. " ". $this->nom  ." a réagi avec mon commentaire: ".$commentaire;
+    public function reagir($commentaire)
+    {
+        return $this->prenom.' '.$this->nom.' a réagi avec mon commentaire: '.$commentaire;
     }
 
     /**
-     * Répondre avec ParamConverter
+     * Répondre avec ParamConverter.
+     *
      * @param User $user
      * @param $message
+     *
      * @return string
      */
-    public function repond(User $user, $message = "Aucun message"){
-
-        return $this->prenom. " ". $this->nom  ." a  répondu à la réaction de ".$user->nom." ". $user->prenom . ": ".$message;
+    public function repond(User $user, $message = 'Aucun message')
+    {
+        return $this->prenom.' '.$this->nom.' a  répondu à la réaction de '.$user->nom.' '.$user->prenom.': '.$message;
     }
 
     /**
-     * Noter avec Objet
+     * Noter avec Objet.
+     *
      * @param $note
+     *
      * @return string
      */
-    public function noter($note = 4){
-
-        return $this ." a noté: ".$note;
+    public function noter($note = 4)
+    {
+        return $this.' a noté: '.$note;
     }
-
 
     /**
-     * Conversion de la note
+     * Conversion de la note.
+     *
      * @return string
      */
-    public function __toString(){
-        return $this->nom. " ". $this->prenom;
+    public function __toString()
+    {
+        return $this->nom.' '.$this->prenom;
     }
-
 
     /**
      * @return mixed
@@ -138,43 +144,47 @@ class User extends AbstractUser {
 
     /**
      * @param $enabled
+     *
      * @return mixed|void
      */
     public function setEnabled($enabled)
     {
-       $this->enabled = $enabled;
+        $this->enabled = $enabled;
     }
 
     /**
-     * Pays
+     * Pays.
+     *
      * @return string
      */
-    static public function getPays(){
-
-        return "Tous les utilisteurs viennent de ". self::PAYS;
+    public static function getPays()
+    {
+        return 'Tous les utilisteurs viennent de '.self::PAYS;
     }
 
     /**
-     * Etudes
+     * Etudes.
+     *
      * @return string
      */
-    static public function getFormation(){
-
-        return "Tous les utilisteurs proviennent de la ". self::FORMATION;
+    public static function getFormation()
+    {
+        return 'Tous les utilisteurs proviennent de la '.self::FORMATION;
     }
 
     /**
-     * Etudes
+     * Etudes.
+     *
      * @return string
      */
-    static public function getLangue(){
-
-        return "Tous les utilisteurs parle ". self::$langue;
+    public static function getLangue()
+    {
+        return 'Tous les utilisteurs parle '.self::$langue;
     }
 
-
     /**
-     * Magic Setter
+     * Magic Setter.
+     *
      * @param $nom
      * @param $valeur
      */
@@ -184,17 +194,16 @@ class User extends AbstractUser {
     }
 
     /**
-     * Magic Getter
+     * Magic Getter.
+     *
      * @param $nom
+     *
      * @return mixed
      */
     public function __get($nom)
     {
-        if (isset($this->attributs[$nom]))
-        {
+        if (isset($this->attributs[$nom])) {
             return $this->attributs[$nom];
         }
     }
-
-
 }

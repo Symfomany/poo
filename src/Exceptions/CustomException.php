@@ -3,11 +3,10 @@
 namespace Exceptions;
 
 /**
- * Class CustomException
- * @package Exceptions
+ * Class CustomException.
  */
-class CustomException extends \RuntimeException{
-
+class CustomException extends \RuntimeException
+{
     /**
      * @var string statusCode
      */
@@ -19,12 +18,13 @@ class CustomException extends \RuntimeException{
     private $headers;
 
     /**
-     * Consructor
-     * @param string $statusCode
-     * @param null $message
+     * Consructor.
+     *
+     * @param string     $statusCode
+     * @param null       $message
      * @param \Exception $previous
-     * @param array $headers
-     * @param int $code
+     * @param array      $headers
+     * @param int        $code
      */
     public function __construct($statusCode, $message = null, \Exception $previous = null, array $headers = array(), $code = 0)
     {
@@ -35,7 +35,8 @@ class CustomException extends \RuntimeException{
     }
 
     /**
-     * Get Status Code
+     * Get Status Code.
+     *
      * @return string
      */
     public function getStatusCode()
@@ -44,17 +45,12 @@ class CustomException extends \RuntimeException{
     }
 
     /**
-     * get Headers
+     * get Headers.
+     *
      * @return array
      */
     public function getHeaders()
     {
         return $this->headers;
     }
-
-
-
-
 }
-
-

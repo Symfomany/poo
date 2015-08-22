@@ -1,24 +1,27 @@
 <?php
+
 namespace Libraries;
 
-class User{
-
+class User
+{
     /**
-     * @var $email
+     * @var
      */
     protected $email;
 
     /**
-     * @var $password
+     * @var
      */
-    protected  $password;
+    protected $password;
 
     /**
-     * Constructeur
+     * Constructeur.
+     *
      * @param $email
      * @param $password
      */
-    public function __construct($email, $password){
+    public function __construct($email, $password)
+    {
         $this->email = $email;
         $this->password = $password;
     }
@@ -54,10 +57,4 @@ class User{
     {
         $this->email = $email;
     }
-
-
-
-
-
-
 }

@@ -1,36 +1,15 @@
 {
-    "name": "symfomany/poo",
-    "license": "MIT",
-    "type": "project",
-    "description": "Learn POO Best Practises By Symfomany",
-    "keywords": ["POO", "PHP"],
-    "homepage": "https://github.com/Symfomany/poo/",
-    "authors": [
-        {
-            "name": "Boyer Julien",
-            "email": "julien@meetserious.com"
-        }
-    ],
     "autoload": {
         "psr-4": { "": "src/"},
         "files": ["helpers/custom_helpers.php"],
         "classmap": ["lib"]
     },
-    "require": {
-        "php": ">=5.3.3",
-        "symfony/debug": "dev-master",
-        "symfony/console": "dev-master",
-        "symfony/filesystem": "dev-master",
-        "symfony/http-foundation": "dev-master",
-        "symfony/yaml": "dev-master",
-        "symfony/finder": "dev-master",
-        "symfony/process": "dev-master",
-        "symfony/config": "dev-master",
-        "symfony/dependency-injection": "dev-master",
-        "symfony/css-selector": "dev-master",
-        "symfony/dom-crawler": "dev-master",
-        "monolog/monolog": "dev-master",
-        "symfony/stopwatch": "dev-master"
-
+    "require":{
+        "symfomany/canicule": "dev-master"
     }
+
+
+
+
+
 }

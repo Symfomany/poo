@@ -1,0 +1,42 @@
++ TODO: Projet concret OO avec Applications
+
++ Traits (Laravel):  Ajout de methode dans la classe, surcharge de traits, utilisation des methdoes de traits, surcharge horizontal sur la classe fille,
+attrbuts de traits, compositions de traits, alias de methode, methodes abstraites ds les traits,
+
+
+utilisation en interne au constructeur de la position
+
+
++ le trait peut surchargé la methode de la classe fille sns touché a la classe fille
+
+ou ecraser
+
++ rennonage de traits si les traits on les meme methodes
+
++ methodes abstraites dans les traits
+
++ Le trait peut utiliser dautre traits héritage de traits
+
++ refactoriser en TRait Extras les 2
+
++ Préparer un traits pour modifier la position d'un produit ou d'une catégorie
+
+
+
+
+
+
+/***********************************************************************************************************************************************/
+
+
++ Closure : varoables externes, lier à de l'orienté objet,  methode bindTo(), lier la Closure à une classe
+
++ Api de réfléxivité (maybe)
+
++ PHPSpec et tes unitaires avec PHPUnit
+
++ Notions UML de représentatons de notre applications
+
++ Projet MVC fait maisons avec include,  classes etc...
+
++
