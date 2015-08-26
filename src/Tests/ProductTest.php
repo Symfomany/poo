@@ -28,12 +28,19 @@ class ProductTests extends \PHPUnit_Framework_TestCase{
 
             $this->assertEquals('foo', array_pop($stack));
             $this->assertEquals(0, count($stack));
-            
+
+            $product = new Product();
+            $this->assertEquals(1, $product->getQuantity());
+            $this->assertEquals("Titre par défaut", $product->getTitle());
 
             $product = new Product(2);
             $this->assertEquals(2, $product->getQuantity());
             $product->setQuantity(5);
             $this->assertEquals(5, $product->getQuantity());
+
+            $product = new Product(2, "Apple Watch");
+            $this->assertEquals(2, $product->getQuantity());
+            $this->assertEquals("Apple Watch", $product->getTitle());
 
         }
         catch(AvailableException $e){

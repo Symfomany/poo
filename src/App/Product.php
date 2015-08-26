@@ -54,12 +54,16 @@ class Product
     /**
      * Constructor
      */
-    public function __construct($quantity = 1){
+    public function __construct($quantity = 1, $title = "Titre par défaut"){
 
         if($quantity < 1){
             throw new AvailableException("Le produit n'est pas crée....");
         }
+        if(strlen($title) < 3){
+            throw new AvailableException("Le titre du produit est NAZ!");
+        }
 
+        $this->title = $title;
         $this->quantity = $quantity;
         $this->visible = true;
         $this->datePublication = new \DateTime("- 2 days");
