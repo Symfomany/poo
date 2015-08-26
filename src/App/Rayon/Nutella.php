@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Rayon;
+
+
+use App\Product;
+
+/**
+ * Class Nutella
+ * @package App\Rayon
+ */
+final class Nutella extends Product{
+
+    protected $volume;
+
+    public function __construct($volume = 250){
+        $this->volume = $volume;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

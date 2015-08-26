@@ -27,7 +27,7 @@ class Commercial extends User
      * @param $pointdevente
      * @param $experience
      */
-    public function __construct($pointdevente, $experience)
+    public function __construct($pointdevente = "Darty", $experience= 5)
     {
         $this->pointdevente = $pointdevente;
         $this->experience = $experience;

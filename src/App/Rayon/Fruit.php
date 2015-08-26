@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Rayon;
+
+
+use App\Category;
+
+
+/**
+ * Class Banane
+ * @package App\Rayon
+ */
+final class Fruit extends Category{
+
+    protected $poid;
+
+    public function construct($poid = 250){
+        $this->poid = $poid;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

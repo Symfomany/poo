@@ -1,0 +1,29 @@
+<?php
+
+namespace App;
+use App\Exceptions\AvailableException;
+use App\Exceptions\StringException;
+
+/**
+ * Class ProductManager.
+ */
+class ProductManager
+{
+
+    /**
+     * @param mixed $quantity
+     */
+    public function compareProduct(Product $product, Product $product2)
+    {
+        return $product->getPrix() > $product2->getPrix() ? $product : $product2;
+    }
+
+    /**
+     * @param mixed $quantity
+     */
+    public function countProduct(Product $product, Product $product2)
+    {
+        return $product->getPrix() > $product2->getPrix() ? $product : $product2;
+    }
+
+}

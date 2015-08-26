@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Rayon;
+
+
+use App\Product;
+
+/**
+ * Class Banane
+ * @package App\Rayon
+ */
+final class Banane extends Product{
+
+    protected $nb;
+
+    public function construct($nb = 250){
+        $this->nb = $nb;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

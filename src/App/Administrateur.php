@@ -2,27 +2,33 @@
 
 namespace Application;
 
+
 /**
- * Class Administrateur.
+ * Class Administrateur
+ * @package Application
  */
 class Administrateur extends Editeur
 {
+
     /**
-     * Image d'Avatar.
-     *
      * @var
      */
     protected $avatar;
 
+
     /**
-     * Nb Etoiles.
-     *
      * @var
      */
     protected $etoiles;
 
+
     /**
-     * Constructeur.
+     * @param $nom
+     * @param $prenom
+     * @param string $edition
+     * @param string $biography
+     * @param $avatar
+     * @param $etoiles
      */
     public function __construct($nom, $prenom, $edition = '', $biography = '', $avatar, $etoiles)
     {
@@ -30,7 +36,6 @@ class Administrateur extends Editeur
         $this->avatar = $avatar;
         $this->etoiles = $etoiles;
     }
-
 
 
     /**
@@ -41,13 +46,15 @@ class Administrateur extends Editeur
         return $this->avatar;
     }
 
+
     /**
-     * @param mixed $avatar
+     * @param $avatar
      */
     public function setAvatar($avatar)
     {
         $this->avatar = $avatar;
     }
+
 
     /**
      * @return mixed
@@ -57,8 +64,9 @@ class Administrateur extends Editeur
         return $this->etoiles;
     }
 
+
     /**
-     * @param mixed $etoiles
+     * @param $etoiles
      */
     public function setEtoiles($etoiles)
     {
@@ -66,8 +74,6 @@ class Administrateur extends Editeur
     }
 
     /**
-     * Moderer un user.
-     *
      * @param User $user
      */
     public function moderer(User $user)

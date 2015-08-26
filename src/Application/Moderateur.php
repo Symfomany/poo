@@ -28,8 +28,8 @@ class Moderateur extends User
         $this->niveau = $niveau;
 
         //to handle 500 error
-        if ($niveau > 10) {
-            trigger_error('Le modérateur ne peut se voir un niveau supérieur à 10', E_USER_WARNING);
+        if($this->niveau > 10){
+            throw new \Exception("Le niveau  dot etre inférieur à 5");
         }
     }
 

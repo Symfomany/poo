@@ -29,6 +29,8 @@ class Administrateur extends Editeur
         parent::__construct($nom, $prenom, $edition, $biography);
         $this->avatar = $avatar;
         $this->etoiles = $etoiles;
+
+
     }
 
     /**

@@ -1,15 +1,17 @@
 {
     "autoload": {
         "psr-4": { "": "src/"},
-        "files": ["helpers/custom_helpers.php"],
+        "files": [
+            "helpers/custom_helpers.php",
+            "helpers/boostrap.php"
+        ],
+        "minimum-stability": "dev",
         "classmap": ["lib"]
     },
-    "require":{
-        "symfomany/canicule": "dev-master"
+    "require": {
+        "symfomany/canicule": "dev-master",
+        "phpunit/phpunit": "4.8.*",
+        "phpdocumentor/phpdocumentor": "2.*",
+        "symfony/var-dumper": "^2.7"
     }
-
-
-
-
-
 }

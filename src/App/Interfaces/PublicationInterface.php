@@ -1,0 +1,10 @@
+<?php
+namespace App\Interfaces;
+
+interface PublicationInterface{
+
+    public function getDatePublication();
+    public function setDatePublication(DateTime $datetime);
+
+
+}
