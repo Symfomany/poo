@@ -23,23 +23,11 @@ class ProductTests extends \PHPUnit_Framework_TestCase{
     }
 
 
-    public function productProvider()
-    {
-        return array(
-            array(0, 0, 0),
-            array(0, 1, 1),
-            array(1, 0, 1),
-            array(1, 1, 3)
-        );
-    }
-
     /**
      * Test constructor of Product
-     * @dataProvider productProvider
      */
-    public function testConstruct($title, $quantity)
+    public function testConstruct()
     {
-        $product =null;
 
         try {
             $product = new Product();
