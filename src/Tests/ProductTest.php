@@ -20,7 +20,7 @@ class ProductTests extends \PHPUnit_Framework_TestCase{
 
         try {
 
-            $product = new Product(5);
+            $product = new Product(2);
             $this->assertEquals(2, $product->getQuantity());
             $product->setQuantity(5);
             $this->assertEquals(5, $product->getQuantity());
