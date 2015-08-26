@@ -14,22 +14,20 @@ class ProductTests extends \PHPUnit_Framework_TestCase{
     /**
      * @return mixed
      */
-    public function testconstruct()
+    public function testConstruct()
     {
         $product =null;
 
         try {
             $product = new Product();
-            $this->assertEquals(1, $product->getQuantity());
+            $this->assertEquals(2, $product->getQuantity());
             $this->assertEquals("Titre par défaut", $product->getTitle());
 
             $product = new Product(2);
             $this->assertEquals(2, $product->getQuantity());
-            $product->setQuantity(5);
-            $this->assertEquals(5, $product->getQuantity());
 
-            $product = new Product(2, "Apple Watch");
-            $this->assertEquals(2, $product->getQuantity());
+            $product = new Product(7, "Apple Watch");
+            $this->assertEquals(7, $product->getQuantity());
             $this->assertEquals("Apple Watch", $product->getTitle());
 
         }
