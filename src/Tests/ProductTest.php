@@ -1,5 +1,6 @@
 <?php
 namespace Tests;
+use App\Category;
 use App\Exceptions\AvailableException;
 use App\Product;
 
@@ -11,10 +12,32 @@ use App\Product;
 class ProductTests extends \PHPUnit_Framework_TestCase{
 
 
+    protected $product;
+
     /**
-     * @return mixed
+     * Conctructor
      */
-    public function testConstruct()
+    protected function setUp()
+    {
+        $this->product = new Product();
+    }
+
+
+    public function productProvider()
+    {
+        return array(
+            array(0, 0, 0),
+            array(0, 1, 1),
+            array(1, 0, 1),
+            array(1, 1, 3)
+        );
+    }
+
+    /**
+     * Test constructor of Product
+     * @dataProvider productProvider
+     */
+    public function testConstruct($title, $quantity)
     {
         $product =null;
 
@@ -35,6 +58,71 @@ class ProductTests extends \PHPUnit_Framework_TestCase{
             echo "Une erreur est survenue sur la quantité";
         }
     }
+
+    /**
+     * Test Qauntity
+     */
+    public function testSetQuantity(){
+        try{
+            $this->product->setQuantity(0);
+        }catch (\Exception $e){
+            print "quantité à 0 \n";
+            $this->product->setQuantity(3);
+        }
+        print "quantité à 3 \n";
+        $this->assertEquals(3,  $this->product->getQuantity());
+
+    }
+    /**
+     * Test Qauntity
+     */
+    public function testDescription($description = ""){
+        try{
+            $this->product->setDescription("");
+        }catch (\Exception $e){
+            print "dscription trop courte (20 caractères) \n";
+            $this->product->setDescription("64q66d4q6s4f6d4d446f4s86f486sd4f6sd46fs4646d46f4sd6f6sq46d4s6f46sdq4f46sdq46f4sdq64f6s4qd6f46sdq46f4s");
+        }
+        print "description OK \n";
+
+    }
+
+
+
+    /**
+     * Test Qauntity
+     */
+    public function testSetCategory(){
+
+        try{
+            $this->product->setCategory(new Category("hhsdsqhduhqhud"));
+        }catch (\Exception $e){
+            print "catégorie à 0 \n";
+            $this->product->setCategory(new Category("ksqhdiuqhsdhisq"));
+        }catch(\Exception $e){
+        }
+        print "catégorie OK\n";
+
+    }
+
+    /**
+     * Test Qauntity
+     */
+    public function testsetVisible(){
+        try{
+            $this->product->setVisible(0);
+        }catch (\Exception $e){
+            print "visibilité pas bonnne \n";
+            $this->product->setVisible(true);
+
+        }
+        print "visibilité OK\n";
+
+    }
+
+
+
+
 
 
 }

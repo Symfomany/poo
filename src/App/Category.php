@@ -17,6 +17,14 @@ class Category
     protected $title;
     protected $visible;
 
+
+    /**
+     * Constructor
+     * @param $title
+     */
+    public function __construct($title = ""){
+        $this->title = $title;
+    }
     /**
      * @return mixed
      */

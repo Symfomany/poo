@@ -1,15 +1,23 @@
 <?php
 
 namespace App;
+
 use App\Exceptions\AvailableException;
 use App\Exceptions\StringException;
-use Symfony\Component\Config\Definition\Exception\Exception;
+use App\Interfaces\PublicationInterface;
+use App\Interfaces\VisibleInterface;
 
 /**
- * Class Product.
+ * Class Product
+ * @author Boyer Julien
+ * @version 1.0
+ * @package App
  */
-class Product
+class Product extends Catalog implements PublicationInterface, VisibleInterface
 {
+
+
+
     /**
      * @var title of Product
      */
@@ -22,18 +30,17 @@ class Product
     /**
      * @var quantity of Product
      */
-   protected $quantity;
+    protected $quantity;
 
     /**
      * @var visibility of Product
      */
-   protected $visible;
+    protected $visible;
 
     /**
      * @var prix of Product
      */
-   protected $prix;
-
+    protected $prix;
 
     /**
      * @var prix of Product
@@ -43,23 +50,49 @@ class Product
     /**
      * @var date of publication
      */
-   protected $datePublication;
+    protected $datePublication;
 
     /**
      * @var Category
      */
-   protected $category;
+    protected $category;
+
+    /**
+     * @var
+     */
+    protected $couleur;
 
 
     /**
-     * Constructor
+     * LIMIT of Description caracters
      */
-    public function __construct($quantity = 1, $title = "Titre par défaut"){
+    const LIMITDESC = 20;
 
-        if($quantity < 1){
+    /**
+     * Pays
+     */
+    const PAYS = "France";
+
+    /**
+     * Langues
+     */
+    const LANGUES = "Fr";
+
+
+
+    /**
+     * Constructor of objects
+     * @param int $quantity
+     * @param string $title
+     * @throws AvailableException
+     */
+    public function __construct($quantity = 1, $title = "Titre par défaut")
+    {
+
+        if ($quantity < 1) {
             throw new AvailableException("Le produit n'est pas crée....");
         }
-        if(strlen($title) < 3){
+        if (strlen($title) < 3) {
             throw new AvailableException("Le titre du produit est NAZ!");
         }
 
@@ -67,9 +100,11 @@ class Product
         $this->quantity = $quantity;
         $this->visible = true;
         $this->datePublication = new \DateTime("- 2 days");
+        $this->couleur = array("Bleu", "Noir", "Orange", "Jaune");
     }
 
     /**
+     * Set quantity
      * @return mixed
      */
     public function getQuantity()
@@ -78,21 +113,13 @@ class Product
     }
 
     /**
-     * Modifie la quantité et vérifie cette derniere
-     * @param mixed $quantity
-     * is_bool() Boolean One of the two special values true or false
-        is_integer() Integer A whole number
-        is_double() Double A floating point number (a number with a decimal point)
-        is_string() String Character data
-        is_object() Object An object
-        is_array() Array An array
-        is_resource() Resource A handle for identifying and working with external
-        resources such as databases or files
-        is_null()
+     * Set quantity
+     * @param $quantity
+     * @throws \Exception
      */
     public function setQuantity($quantity)
     {
-        if($quantity == 0 || !is_int($quantity)){
+        if ($quantity == 0 || !is_int($quantity)) {
             throw new \Exception('Votre quantité ne doit pas être égale à 0');
         }
 
@@ -100,24 +127,31 @@ class Product
     }
 
 
-    public function setCategory($category)
+    /**
+     * Set a category
+     * @param Category $category
+     * @throws \Exception
+     */
+    public function setCategory(Category $category)
     {
-        if(is_object($category) && $category instanceof \App\Category && strlen($category->getTitle()) >= 5 ) {
+        if (is_object($category) && $category instanceof \App\Category && strlen($category->getTitle()) >= 5) {
             $this->category = $category;
 
-        }else{
+        } else {
             throw new \Exception('Pas un objet de la cat');
         }
     }
 
 
     /**
+     * Set visibility
      * @param mixed $visible
      */
-    public function setVisible($visible){
-        if(!is_bool($visible)){
+    public function setVisible($visible)
+    {
+        if (!is_bool($visible)) {
             throw new \Exception("Attention ta visibilité doit etre un bolléen");
-        }elseif( $visible == false){
+        } elseif ($visible == false) {
             throw new AvailableException($this);
         }
 
@@ -125,8 +159,8 @@ class Product
     }
 
 
-
     /**
+     * Get visibility
      * @return mixed
      */
     public function getVisible()
@@ -136,6 +170,7 @@ class Product
 
 
     /**
+     * Get date of publication
      * @return mixed
      */
     public function getDatePublication()
@@ -145,6 +180,7 @@ class Product
 
 
     /**
+     * Get title
      * @return title
      */
     public function getTitle()
@@ -161,6 +197,7 @@ class Product
     }
 
     /**
+     * Get a description
      * @return description
      */
     public function getDescription()
@@ -169,41 +206,73 @@ class Product
     }
 
     /**
-     * @param description $description
+     * set a description
+     * @param $description
+     * @throws StringException
      */
     public function setDescription($description)
     {
-        if(strlen($description) < 200){
+        if (strlen($description) < self::LIMITDESC) {
             throw new StringException('La chaine doit etre inférieur à 200 caractères'); // On lance une exception "MonException".
 
         }
 
         $this->description = $description;
-
     }
 
-    /*public function availableQuantity(Product $product){
+    /**
+     * Check quantity if available
+     * @param Product $product
+     * @throws AvailableException
+     */
+    public function compareProduct(Product $product)
+    {
+        if ($this->getPrix() > $product->getPrix()) {
+            return $product;
+        }
+        return $this;
+    }
+    /**
+     * Check quantity if available
+     * @param Product $product
+     * @throws AvailableException
+     */
+    public function availableQuantity(Product $product)
+    {
 
-        if($product->getQuantity()  == 0){
+        if ($product->getQuantity() == 0) {
             throw new AvailableException('La quantité doit etre au minimum de 1'); // On lance une exception "MonException".
         }
-    }*/
+    }
 
-    public function availableVisible(Product $product){
+    /**
+     * Available a product
+     * @param Product $product
+     * @throws AvailableException
+     */
+    public function availableVisible(Product $product)
+    {
 
-        if($product->getQuantity()  == 0){
+        if ($product->getQuantity() == 0) {
             throw new AvailableException('La visible doit etre à 1'); // On lance une exception "MonException".
         }
     }
 
-    public function availableDate(Product $product){
+    /**
+     * Available of date
+     * @param Product $product
+     * @throws AvailableException
+     */
+    public function availableDate(Product $product)
+    {
 
-        if($product->getDatePublication()  < new \DateTime("now")){
+        if ($product->getDatePublication() < new \DateTime("now")) {
             throw new AvailableException("La date de publication doit etre supérieur à aujourd'hui"); // On lance une exception "MonException".
         }
     }
 
     /**
+     * Get a price
      * @return prix
      */
     public function getPrix()
@@ -212,6 +281,7 @@ class Product
     }
 
     /**
+     * Set a price
      * @param prix $prix
      */
     public function setPrix($prix)
@@ -219,19 +289,93 @@ class Product
         $this->prix = $prix;
     }
 
-    public function setDatePublication(\DateTime $date_publication){
-
+    /**
+     * Set date of publication
+     * @param \DateTime $date_publication
+     */
+    public function setDatePublication(\DateTime $date_publication)
+    {
 
         $this->date_publication = $date_publication;
     }
 
 
-    public function __toString(){
+    /**
+     * Convert object to string with title of product
+     * @return title
+     */
+    public function __toString()
+    {
 
         return $this->getTitle();
     }
 
+    /**
+     * Is Active User.
+     *
+     * @return mixed
+     */
+    public function getEnabled()
+    {
+        // TODO: Implement getEnabled() method.
+    }
 
+    /**
+     * @param $enabled
+     *
+     * @return mixed
+     */
+    public function setEnabled($enabled)
+    {
+        // TODO: Implement setEnabled() method.
+    }
+
+    /**
+     * Is Banned User.
+     *
+     * @return mixed
+     */
+    public function getBanned()
+    {
+        // TODO: Implement getBanned() method.
+    }
+
+    /**
+     * @param $banned
+     *
+     * @return mixed
+     */
+    public function setBanned($banned)
+    {
+        // TODO: Implement setBanned() method.
+    }
+
+    /**
+     * Is LOcked User.
+     *
+     * @return mixed
+     */
+    public function getLocked()
+    {
+        // TODO: Implement getLocked() method.
+    }
+
+    /**
+     * @param $locked
+     *
+     * @return mixed
+     */
+    public function setLocked($locked)
+    {
+        // TODO: Implement setLocked() method.
+    }
+
+    /**
+     * @return array
+     */
+    public function getLanguage(){
+        return array(self::PAYS, self::LANGUES);
+    }
 
 
 }
