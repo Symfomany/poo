@@ -54,7 +54,7 @@ class Category
      */
     public function setVisible($visible)
     {
-        if($visible == false){
+        if($visible === false){
             throw new AvailableException($this);
         }
         $this->visible = $visible;

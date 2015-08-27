@@ -133,7 +133,7 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
      */
     public function getBanned()
     {
-        // TODO: Implement getBanned() method.
+        return true;
     }
 
     /**
@@ -143,7 +143,7 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
      */
     public function setBanned($banned)
     {
-        // TODO: Implement setBanned() method.
+        return true;
     }
 
     /**
@@ -153,7 +153,7 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
      */
     public function getLocked()
     {
-        // TODO: Implement getLocked() method.
+        return true;
     }
 
     /**
@@ -163,7 +163,7 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
      */
     public function setLocked($locked)
     {
-        // TODO: Implement setLocked() method.
+        return true;
     }
 
     /**
@@ -173,7 +173,7 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
      */
     public function getDateCreated()
     {
-        // TODO: Implement getDateCreated() method.
+        return true;
     }
 
     /**
@@ -185,7 +185,7 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
      */
     public function setDateCreated(\DateTime $datetime)
     {
-        // TODO: Implement setDateCreated() method.
+        return true;
     }
 
     /**
@@ -195,7 +195,7 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
      */
     public function getDateUpdated()
     {
-        // TODO: Implement getDateUpdated() method.
+        return true;
     }
 
     /**
@@ -208,7 +208,7 @@ abstract class AbstractUser  implements ActivationInterface, InscriptionInterfac
     public function setDateUpdated(\DateTime $datetime)
     {
 
-        // TODO: Implement setDateUpdated() method.
+        return true;
     }
 
     /**

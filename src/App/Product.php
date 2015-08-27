@@ -151,7 +151,7 @@ class Product extends Catalog implements PublicationInterface, VisibleInterface
     {
         if (!is_bool($visible)) {
             throw new \Exception("Attention ta visibilité doit etre un bolléen");
-        } elseif ($visible == false) {
+        } elseif ($visible === false) {
             throw new AvailableException($this);
         }
 

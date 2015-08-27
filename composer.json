@@ -5,9 +5,9 @@
             "helpers/custom_helpers.php",
             "helpers/boostrap.php"
         ],
-        "minimum-stability": "dev",
         "classmap": ["lib"]
     },
+    "minimum-stability": "dev",
     "require": {
         "symfomany/canicule": "dev-master",
         "phpunit/phpunit": "4.8.*",
