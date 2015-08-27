@@ -12,6 +12,7 @@
         "symfomany/canicule": "dev-master",
         "phpunit/phpunit": "4.8.*",
         "phpdocumentor/phpdocumentor": "2.*",
-        "symfony/var-dumper": "^2.7"
+        "symfony/var-dumper": "^2.7",
+        "mockery/mockery": "^1.0@dev"
     }
 }

@@ -15,6 +15,7 @@ return array(
     'PhpCollection' => array($vendorDir . '/phpcollection/phpcollection/src'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
     'PHPParser' => array($vendorDir . '/nikic/php-parser/lib'),
+    'Mockery' => array($vendorDir . '/mockery/mockery/library'),
     'Metadata\\' => array($vendorDir . '/jms/metadata/src'),
     'KevinGH\\Version' => array($vendorDir . '/kherge/version/src/lib'),
     'JsonSchema' => array($vendorDir . '/justinrainbow/json-schema/src'),

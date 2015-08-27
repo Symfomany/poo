@@ -24,6 +24,8 @@
 
         use App\Promotions;
         use App\Actors as Actor;
+        use App\User;
+
 
         /*
         $promotions = new Promotions();
@@ -43,7 +45,7 @@
             )
         );*/
 
-
+/*
         try{
 
                 $produit = new \App\Product();
@@ -71,7 +73,7 @@
         }
 
         echo $produit->getTitle();
-
+*/
         //        try{
 //                $produit = new \App\Product();
 //                $produit->setQuantity("5");

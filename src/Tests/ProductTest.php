@@ -141,6 +141,10 @@ class ProductTests extends \PHPUnit_Framework_TestCase{
     public function testgetDatePublication()
     {
         $test = $this->getMockBuilder('\App\Product')->getMock();
+        $date = $test->method('setDatePublication')->with(new \DateTime('now'));
+
+        dump($date);
+
         $test->method('getDatePublication')
             ->willReturn(true);
 

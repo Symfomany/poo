@@ -9,6 +9,8 @@ namespace App;
  */
 class User
 {
+
+
     protected $lastname;
 
     protected $firstname;
@@ -23,6 +25,28 @@ class User
     protected $activation = true;
 
     protected $panier = array();
+
+
+    /**
+     * @var Singleton reference to singleton instance
+     */
+    private static $instance;
+
+
+    /**
+     * gets the instance via lazy initialization (created on first usage)
+     *
+     * @return self
+     */
+    public static function getInstance()
+    {
+        if (null === static::$instance) {
+            static::$instance = new static;
+        }
+
+        return static::$instance;
+    }
+
 
     /**
      * @param mixed $age
