@@ -27,33 +27,62 @@
         use App\User;
 
 
-        $darty = new \App\Export\DartyFactory();
+        $manager = new \App\Commercial\Manager();
 
-        $product1 = $darty->createProduct('Apple Watch', "A22EF", 14.00);
-//        dump($product->vente());
+        $product = $manager->build(new \App\Commercial\ProductBuilder());
 
-        $category1 = $darty->createCategory('Montre', "Montre jolies");
-//        dump($category->vente());
+        dump($product);
 
 
+//        $darty = new \App\Export\DartyFactory();
 
-        $boulanger = new \App\Export\BoulangerFactory();
-
-        $product2 = $boulanger->createProduct('Apple Watch', "A22EF", 14.00);
-//        dump($product->vente());
-
-        $category2 = $boulanger->createCategory('Montre', "Montre jolies");
-//        dump($category->vente());
+//        $product1 = $darty->createProduct('Apple Watch', "A22EF", 14.00);
+////        dump($product->vente());
+//
+//        $category1 = $darty->createCategory('Montre', "Montre jolies");
+////        dump($category->vente());
 
 
-        $running = function(\App\Export\VenteInterface $obj){
-                return $obj->vente();
-        };
 
-        dump($running($product1));
-        dump($running($product2));
-        dump($running($category1));
-        dump($running($category2));
+//        $boulanger = new \App\Export\BoulangerFactory();
+
+//        $product2 = $boulanger->createProduct('Apple Watch', "A22EF", 14.00);
+////        dump($product->vente());
+//
+//        $category2 = $boulanger->createCategory('Montre', "Montre jolies");
+////        dump($category->vente());
+
+
+//        $running = function(\App\Export\VenteInterface $obj){
+//                return $obj->vente();
+//        };
+//
+//
+//
+//        $abstractrunningprod = function(\App\Export\AbstractFactory $class, $title, $reference, $prix){
+//                return $class->createProduct($title, $reference, $prix);
+//        };
+//
+//        $abstractrunningcat = function(\App\Export\AbstractFactory $class, $title, $description){
+//                return $class->createCategory($title, $description);
+//        };
+//
+//        $produit = $abstractrunningprod($boulanger, 'Apple Watch', "A22EF", 14.00);
+//        $produit2 = $abstractrunningprod($darty, 'Apple Ipad', 'B22EF', 150);
+//        $cat = $abstractrunningcat($boulanger, "Montre", "Montre technologique");
+//        $cat2 = $abstractrunningcat($darty, "Tablette", "Tablette Sexy");
+//
+//        dump($produit);
+//        dump($produit->vente());
+//
+//        dump($produit2);
+//        dump($produit2->vente());
+//
+//        dump($cat);
+//        dump($cat->vente());
+//
+//        dump($cat2);
+//        dump($cat2->vente());
 
         /*
         $promotions = new Promotions();
