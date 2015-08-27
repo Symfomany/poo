@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /usr/share/nginx/poo/vendor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/nv.d3.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.min.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">/usr/share/nginx/poo</a></li>
+        <li><a href="index.html">vendor</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#21">NormalizerFormatter</a></td><td class="text-right">23%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#24">LineFormatter</a></td><td class="text-right">37%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#27">Logger</a></td><td class="text-right">40%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#23">AbstractHandler</a></td><td class="text-right">43%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php.html#22">AbstractProcessingHandler</a></td><td class="text-right">58%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/StreamHandler.php.html#23">StreamHandler</a></td><td class="text-right">59%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#27">Logger</a></td><td class="text-right">657</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#21">NormalizerFormatter</a></td><td class="text-right">642</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#24">LineFormatter</a></td><td class="text-right">219</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#23">AbstractHandler</a></td><td class="text-right">83</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/StreamHandler.php.html#23">StreamHandler</a></td><td class="text-right">50</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php.html#22">AbstractProcessingHandler</a></td><td class="text-right">8</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#351"><abbr title="Logger::addError">addError</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#327"><abbr title="Logger::addNotice">addNotice</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#363"><abbr title="Logger::addCritical">addCritical</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#375"><abbr title="Logger::addAlert">addAlert</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#397"><abbr title="Logger::getLevels">getLevels</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#387"><abbr title="Logger::addEmergency">addEmergency</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#315"><abbr title="Logger::addInfo">addInfo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#303"><abbr title="Logger::addDebug">addDebug</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#199"><abbr title="Logger::getHandlers">getHandlers</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#186"><abbr title="Logger::setHandlers">setHandlers</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#210"><abbr title="Logger::pushProcessor">pushProcessor</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#225"><abbr title="Logger::popProcessor">popProcessor</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#237"><abbr title="Logger::getProcessors">getProcessors</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#438"><abbr title="Logger::isHandling">isHandling</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#463"><abbr title="Logger::log">log</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#591"><abbr title="Logger::critical">critical</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#577"><abbr title="Logger::crit">crit</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#605"><abbr title="Logger::alert">alert</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#619"><abbr title="Logger::emerg">emerg</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#645"><abbr title="Logger::setTimezone">setTimezone</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#633"><abbr title="Logger::emergency">emergency</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#563"><abbr title="Logger::error">error</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#549"><abbr title="Logger::err">err</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#493"><abbr title="Logger::info">info</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#479"><abbr title="Logger::debug">debug</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#507"><abbr title="Logger::notice">notice</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#521"><abbr title="Logger::warn">warn</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#535"><abbr title="Logger::warning">warning</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#47"><abbr title="LineFormatter::includeStacktraces">includeStacktraces</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#169"><abbr title="Logger::popHandler">popHandler</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#102"><abbr title="LineFormatter::formatBatch">formatBatch</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#146"><abbr title="Logger::getName">getName</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#74"><abbr title="AbstractHandler::pushProcessor">pushProcessor</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#87"><abbr title="AbstractHandler::popProcessor">popProcessor</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#67"><abbr title="AbstractHandler::close">close</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#55"><abbr title="AbstractHandler::handleBatch">handleBatch</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#117"><abbr title="LineFormatter::normalizeException">normalizeException</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#49"><abbr title="NormalizerFormatter::formatBatch">formatBatch</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#115"><abbr title="NormalizerFormatter::normalizeException">normalizeException</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#172"><abbr title="NormalizerFormatter::throwEncodeError">throwEncodeError</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#136"><abbr title="AbstractHandler::getLevel">getLevel</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#99"><abbr title="AbstractHandler::setFormatter">setFormatter</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/StreamHandler.php.html#103"><abbr title="StreamHandler::customErrorHandler">customErrorHandler</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#60"><abbr title="LineFormatter::ignoreEmptyContextAndExtra">ignoreEmptyContextAndExtra</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#55"><abbr title="LineFormatter::allowInlineLineBreaks">allowInlineLineBreaks</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#148"><abbr title="AbstractHandler::setBubble">setBubble</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#161"><abbr title="AbstractHandler::getBubble">getBubble</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#141"><abbr title="NormalizerFormatter::toJson">toJson</a></a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php.html#56"><abbr title="AbstractProcessingHandler::processRecord">processRecord</a></a></td><td class="text-right">33%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/StreamHandler.php.html#127"><abbr title="StreamHandler::createDir">createDir</a></a></td><td class="text-right">38%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#58"><abbr title="NormalizerFormatter::normalize">normalize</a></a></td><td class="text-right">41%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#68"><abbr title="LineFormatter::format">format</a></a></td><td class="text-right">45%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/StreamHandler.php.html#113"><abbr title="StreamHandler::getDirFromStream">getDirFromStream</a></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/StreamHandler.php.html#71"><abbr title="StreamHandler::write">write</a></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#151"><abbr title="LineFormatter::replaceNewlines">replaceNewlines</a></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#408"><abbr title="Logger::getLevelName">getLevelName</a></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#423"><abbr title="Logger::toMonologLevel">toMonologLevel</a></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#134"><abbr title="LineFormatter::convertToString">convertToString</a></a></td><td class="text-right">71%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#30"><abbr title="NormalizerFormatter::__construct">__construct</a></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/StreamHandler.php.html#42"><abbr title="StreamHandler::__construct">__construct</a></a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php.html#27"><abbr title="AbstractProcessingHandler::handle">handle</a></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#250"><abbr title="Logger::addRecord">addRecord</a></a></td><td class="text-right">87%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#58"><abbr title="NormalizerFormatter::normalize">normalize</abbr></a></td><td class="text-right">73</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#172"><abbr title="NormalizerFormatter::throwEncodeError">throwEncodeError</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#115"><abbr title="NormalizerFormatter::normalizeException">normalizeException</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#117"><abbr title="LineFormatter::normalizeException">normalizeException</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#68"><abbr title="LineFormatter::format">format</abbr></a></td><td class="text-right">18</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#141"><abbr title="NormalizerFormatter::toJson">toJson</abbr></a></td><td class="text-right">15</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#438"><abbr title="Logger::isHandling">isHandling</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/StreamHandler.php.html#127"><abbr title="StreamHandler::createDir">createDir</abbr></a></td><td class="text-right">10</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#250"><abbr title="Logger::addRecord">addRecord</abbr></a></td><td class="text-right">10</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/StreamHandler.php.html#71"><abbr title="StreamHandler::write">write</abbr></a></td><td class="text-right">9</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#169"><abbr title="Logger::popHandler">popHandler</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#210"><abbr title="Logger::pushProcessor">pushProcessor</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#225"><abbr title="Logger::popProcessor">popProcessor</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#186"><abbr title="Logger::setHandlers">setHandlers</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#87"><abbr title="AbstractHandler::popProcessor">popProcessor</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#49"><abbr title="NormalizerFormatter::formatBatch">formatBatch</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#102"><abbr title="LineFormatter::formatBatch">formatBatch</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#74"><abbr title="AbstractHandler::pushProcessor">pushProcessor</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractHandler.php.html#55"><abbr title="AbstractHandler::handleBatch">handleBatch</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#47"><abbr title="LineFormatter::includeStacktraces">includeStacktraces</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php.html#56"><abbr title="AbstractProcessingHandler::processRecord">processRecord</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#134"><abbr title="LineFormatter::convertToString">convertToString</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/StreamHandler.php.html#113"><abbr title="StreamHandler::getDirFromStream">getDirFromStream</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#423"><abbr title="Logger::toMonologLevel">toMonologLevel</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php.html#30"><abbr title="NormalizerFormatter::__construct">__construct</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/StreamHandler.php.html#42"><abbr title="StreamHandler::__construct">__construct</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Logger.php.html#408"><abbr title="Logger::getLevelName">getLevelName</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Formatter/LineFormatter.php.html#151"><abbr title="LineFormatter::replaceNewlines">replaceNewlines</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php.html#27"><abbr title="AbstractProcessingHandler::handle">handle</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 2.2.2</a> using <a href="http://php.net/" target="_top">PHP 5.5.9-1ubuntu4.11</a> and <a href="http://phpunit.de/">PHPUnit 4.8.6</a> at Thu Aug 27 9:45:08 CEST 2015.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/holder.min.js" type="text/javascript"></script>
+  <script src="../js/d3.min.js" type="text/javascript"></script>
+  <script src="../js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,0,0,1,1,2,2,0,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([47,0,0,1,2,2,1,4,2,3,0,14], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[37.5,28,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/LineFormatter.php.html#24\">LineFormatter<\/a>"],[23.809523809524,37,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/NormalizerFormatter.php.html#21\">NormalizerFormatter<\/a>"],[43.75,19,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#23\">AbstractHandler<\/a>"],[58.333333333333,6,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractProcessingHandler.php.html#22\">AbstractProcessingHandler<\/a>"],[59.322033898305,21,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/StreamHandler.php.html#23\">StreamHandler<\/a>"],[40.860215053763,54,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#27\">Logger<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/LineFormatter.php.html#39\">LineFormatter::__construct<\/a>"],[0,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/LineFormatter.php.html#47\">LineFormatter::includeStacktraces<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/LineFormatter.php.html#55\">LineFormatter::allowInlineLineBreaks<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/LineFormatter.php.html#60\">LineFormatter::ignoreEmptyContextAndExtra<\/a>"],[45.833333333333,8,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/LineFormatter.php.html#68\">LineFormatter::format<\/a>"],[0,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/LineFormatter.php.html#102\">LineFormatter::formatBatch<\/a>"],[100,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/LineFormatter.php.html#112\">LineFormatter::stringify<\/a>"],[0,4,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/LineFormatter.php.html#117\">LineFormatter::normalizeException<\/a>"],[71.428571428571,5,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/LineFormatter.php.html#134\">LineFormatter::convertToString<\/a>"],[66.666666666667,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/LineFormatter.php.html#151\">LineFormatter::replaceNewlines<\/a>"],[75,3,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/NormalizerFormatter.php.html#30\">NormalizerFormatter::__construct<\/a>"],[100,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/NormalizerFormatter.php.html#41\">NormalizerFormatter::format<\/a>"],[0,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/NormalizerFormatter.php.html#49\">NormalizerFormatter::formatBatch<\/a>"],[41.935483870968,17,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/NormalizerFormatter.php.html#58\">NormalizerFormatter::normalize<\/a>"],[0,4,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/NormalizerFormatter.php.html#115\">NormalizerFormatter::normalizeException<\/a>"],[25,5,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/NormalizerFormatter.php.html#141\">NormalizerFormatter::toJson<\/a>"],[0,5,"<a href=\"monolog\/monolog\/src\/Monolog\/Formatter\/NormalizerFormatter.php.html#172\">NormalizerFormatter::throwEncodeError<\/a>"],[100,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#38\">AbstractHandler::__construct<\/a>"],[100,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#47\">AbstractHandler::isHandling<\/a>"],[0,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#55\">AbstractHandler::handleBatch<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#67\">AbstractHandler::close<\/a>"],[0,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#74\">AbstractHandler::pushProcessor<\/a>"],[0,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#87\">AbstractHandler::popProcessor<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#99\">AbstractHandler::setFormatter<\/a>"],[100,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#109\">AbstractHandler::getFormatter<\/a>"],[100,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#124\">AbstractHandler::setLevel<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#136\">AbstractHandler::getLevel<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#148\">AbstractHandler::setBubble<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#161\">AbstractHandler::getBubble<\/a>"],[100,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#166\">AbstractHandler::__destruct<\/a>"],[100,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractHandler.php.html#180\">AbstractHandler::getDefaultFormatter<\/a>"],[83.333333333333,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractProcessingHandler.php.html#27\">AbstractProcessingHandler::handle<\/a>"],[100,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractProcessingHandler.php.html#48\">AbstractProcessingHandler::write<\/a>"],[33.333333333333,3,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/AbstractProcessingHandler.php.html#56\">AbstractProcessingHandler::processRecord<\/a>"],[80,3,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/StreamHandler.php.html#42\">StreamHandler::__construct<\/a>"],[100,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/StreamHandler.php.html#60\">StreamHandler::close<\/a>"],[60.869565217391,7,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/StreamHandler.php.html#71\">StreamHandler::write<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/StreamHandler.php.html#103\">StreamHandler::customErrorHandler<\/a>"],[50,3,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/StreamHandler.php.html#113\">StreamHandler::getDirFromStream<\/a>"],[38.461538461538,5,"<a href=\"monolog\/monolog\/src\/Monolog\/Handler\/StreamHandler.php.html#127\">StreamHandler::createDir<\/a>"],[100,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#136\">Logger::__construct<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#146\">Logger::getName<\/a>"],[100,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#157\">Logger::pushHandler<\/a>"],[0,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#169\">Logger::popHandler<\/a>"],[0,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#186\">Logger::setHandlers<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#199\">Logger::getHandlers<\/a>"],[0,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#210\">Logger::pushProcessor<\/a>"],[0,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#225\">Logger::popProcessor<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#237\">Logger::getProcessors<\/a>"],[87.096774193548,10,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#250\">Logger::addRecord<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#303\">Logger::addDebug<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#315\">Logger::addInfo<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#327\">Logger::addNotice<\/a>"],[100,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#339\">Logger::addWarning<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#351\">Logger::addError<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#363\">Logger::addCritical<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#375\">Logger::addAlert<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#387\">Logger::addEmergency<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#397\">Logger::getLevels<\/a>"],[66.666666666667,2,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#408\">Logger::getLevelName<\/a>"],[66.666666666667,3,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#423\">Logger::toMonologLevel<\/a>"],[0,3,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#438\">Logger::isHandling<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#463\">Logger::log<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#479\">Logger::debug<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#493\">Logger::info<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#507\">Logger::notice<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#521\">Logger::warn<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#535\">Logger::warning<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#549\">Logger::err<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#563\">Logger::error<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#577\">Logger::crit<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#591\">Logger::critical<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#605\">Logger::alert<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#619\">Logger::emerg<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#633\">Logger::emergency<\/a>"],[0,1,"<a href=\"monolog\/monolog\/src\/Monolog\/Logger.php.html#645\">Logger::setTimezone<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

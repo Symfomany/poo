@@ -310,65 +310,6 @@ class Product extends Catalog implements PublicationInterface, VisibleInterface
         return $this->getTitle();
     }
 
-    /**
-     * Is Active User.
-     *
-     * @return mixed
-     */
-    public function getEnabled()
-    {
-        // TODO: Implement getEnabled() method.
-    }
-
-    /**
-     * @param $enabled
-     *
-     * @return mixed
-     */
-    public function setEnabled($enabled)
-    {
-        // TODO: Implement setEnabled() method.
-    }
-
-    /**
-     * Is Banned User.
-     *
-     * @return mixed
-     */
-    public function getBanned()
-    {
-        // TODO: Implement getBanned() method.
-    }
-
-    /**
-     * @param $banned
-     *
-     * @return mixed
-     */
-    public function setBanned($banned)
-    {
-        // TODO: Implement setBanned() method.
-    }
-
-    /**
-     * Is LOcked User.
-     *
-     * @return mixed
-     */
-    public function getLocked()
-    {
-        // TODO: Implement getLocked() method.
-    }
-
-    /**
-     * @param $locked
-     *
-     * @return mixed
-     */
-    public function setLocked($locked)
-    {
-        // TODO: Implement setLocked() method.
-    }
 
     /**
      * @return array

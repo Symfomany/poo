@@ -22,6 +22,23 @@ class ProductTests extends \PHPUnit_Framework_TestCase{
         $this->product = new Product();
     }
 
+    public function testMain(){
+        // Check 1 === 1 is true
+        $this->assertTrue(1 === 1);
+
+// Check 1 === 2 is false
+        $this->assertFalse(1 === 2);
+
+// Check 'Hello' equals 'Hello'
+        $this->assertEquals('Hello', 'Hello');
+
+// Check array has key 'language'
+        $this->assertArrayHasKey('language', array('language' => 'php', 'size' => '1024'));
+
+// Check array contains value 'php'
+        $this->assertContains('php', array('php', 'ruby', 'c++', 'JavaScript'));
+
+    }
 
     /**
      * Test constructor of Product
@@ -76,7 +93,6 @@ class ProductTests extends \PHPUnit_Framework_TestCase{
     }
 
 
-
     /**
      * Test Qauntity
      */
@@ -108,8 +124,29 @@ class ProductTests extends \PHPUnit_Framework_TestCase{
 
     }
 
+    /**
+     * Get visibility
+     * @return mixed
+     */
+    public function testgetVisible()
+    {
+        $this->assertEquals(true, $this->product->getVisible());
+    }
 
 
+    /**
+     * Get date of publication
+     * @return mixed
+     */
+    public function testgetDatePublication()
+    {
+        $test = $this->getMockBuilder('\App\Product')->getMock();
+        $test->method('getDatePublication')
+            ->willReturn(true);
+
+        $this->assertEquals(true, $test->getDatePublication());
+
+    }
 
 
 

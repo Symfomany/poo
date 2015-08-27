@@ -3,6 +3,9 @@ POO Pedagogique Project
 
 ![Project Status](http://stillmaintained.com/lexik/LexikPayboxBundle.png)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5f2f2540-3843-4d77-8fce-ce8477a800f7/big.png)](https://insight.sensiolabs.com/projects/5f2f2540-3843-4d77-8fce-ce8477a800f7)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Symfomany/poo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Symfomany/poo/?branch=master)
+[![Build Status](https://travis-ci.org/Symfomany/poo.svg?branch=master)](https://travis-ci.org/Symfomany/poo)
+
 
 Welcome to my the POO Project - A simply example to understand POO PHP with Composer.json & Symfony 2 Components
 
