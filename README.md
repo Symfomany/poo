@@ -2,7 +2,7 @@ POO Pedagogique Project
 ========================
 
 ![Project Status](http://stillmaintained.com/lexik/LexikPayboxBundle.png)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/2b13a8f5-85bb-40a2-a396-286852570e50/big.png)](https://insight.sensiolabs.com/projects/2b13a8f5-85bb-40a2-a396-286852570e50)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/2b13a8f5-85bb-40a2-a396-286852570e50/mini.png)](https://insight.sensiolabs.com/projects/2b13a8f5-85bb-40a2-a396-286852570e50)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/2b13a8f5-85bb-40a2-a396-286852570e50/big.png)](https://insight.sensiolabs.com/projects/2b13a8f5-85bb-40a2-a396-286852570e50)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Symfomany/poo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Symfomany/poo/?branch=master)
 [![Build Status](https://travis-ci.org/Symfomany/poo.svg?branch=master)](https://travis-ci.org/Symfomany/poo)
