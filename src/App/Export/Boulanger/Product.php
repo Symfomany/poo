@@ -3,7 +3,7 @@
 namespace App\Export\Boulanger;
 
 
-use App\Product as BaseProduct;
+use App\Export\Product as BaseProduct;
 
 /**
  * Class Product
@@ -11,17 +11,6 @@ use App\Product as BaseProduct;
  */
 class Product extends BaseProduct{
 
-
-    /**
-     * @param int $title
-     * @param string $prixHT
-     * @param $reference
-     */
-    public function __construct($title, $prixHT, $reference){
-        $this->title = $title;
-        $this->prixHT = $prixHT;
-        $this->reference = $reference;
-    }
 
     /**
      * Affiche le produit chez Boulanger

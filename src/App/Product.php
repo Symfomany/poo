@@ -6,6 +6,7 @@ use App\Exceptions\AvailableException;
 use App\Exceptions\StringException;
 use App\Interfaces\PublicationInterface;
 use App\Interfaces\VisibleInterface;
+use Export\VenteInterface;
 
 /**
  * Class Product
@@ -22,6 +23,11 @@ class Product extends Catalog implements PublicationInterface, VisibleInterface
      * @var title of Product
      */
     protected $title;
+
+    /**
+     * @var $reference of Product
+     */
+    protected $reference;
     /**
      * @var description of Product
      */
@@ -317,6 +323,55 @@ class Product extends Catalog implements PublicationInterface, VisibleInterface
     public function getLanguage(){
         return array(self::PAYS, self::LANGUES);
     }
+
+    /**
+     * @return of
+     */
+    public function getReference()
+    {
+        return $this->reference;
+    }
+
+    /**
+     * @param of $reference
+     */
+    public function setReference($reference)
+    {
+        $this->reference = $reference;
+    }
+
+    /**
+     * @return prix
+     */
+    public function getPrixHT()
+    {
+        return $this->prixHT;
+    }
+
+    /**
+     * @param prix $prixHT
+     */
+    public function setPrixHT($prixHT)
+    {
+        $this->prixHT = $prixHT;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCouleur()
+    {
+        return $this->couleur;
+    }
+
+    /**
+     * @param mixed $couleur
+     */
+    public function setCouleur($couleur)
+    {
+        $this->couleur = $couleur;
+    }
+
 
 
 }

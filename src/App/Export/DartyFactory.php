@@ -16,7 +16,7 @@ class DartyFactory extends AbstractFactory{
      */
     public function createProduct($title, $prixHT, $reference)
     {
-        new Darty\Product($title, $prixHT, $reference);
+        return new Darty\Product($title, $prixHT, $reference);
     }
 
     /**
@@ -25,7 +25,7 @@ class DartyFactory extends AbstractFactory{
      */
     public function createCategory($title, $description)
     {
-        new Darty\Category($title, $description);
+        return new Darty\Category($title, $description);
     }
 
 

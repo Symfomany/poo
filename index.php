@@ -27,6 +27,34 @@
         use App\User;
 
 
+        $darty = new \App\Export\DartyFactory();
+
+        $product1 = $darty->createProduct('Apple Watch', "A22EF", 14.00);
+//        dump($product->vente());
+
+        $category1 = $darty->createCategory('Montre', "Montre jolies");
+//        dump($category->vente());
+
+
+
+        $boulanger = new \App\Export\BoulangerFactory();
+
+        $product2 = $boulanger->createProduct('Apple Watch', "A22EF", 14.00);
+//        dump($product->vente());
+
+        $category2 = $boulanger->createCategory('Montre', "Montre jolies");
+//        dump($category->vente());
+
+
+        $running = function(\App\Export\VenteInterface $obj){
+                return $obj->vente();
+        };
+
+        dump($running($product1));
+        dump($running($product2));
+        dump($running($category1));
+        dump($running($category2));
+
         /*
         $promotions = new Promotions();
         $user = new User();

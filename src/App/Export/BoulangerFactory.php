@@ -16,7 +16,7 @@ class BoulangerFactory extends AbstractFactory{
      */
     public function createProduct($title, $prixHT, $reference)
     {
-        new Boulanger\Product($title, $prixHT, $reference);
+        return new Boulanger\Product($title, $prixHT, $reference);
 
     }
 
@@ -26,7 +26,7 @@ class BoulangerFactory extends AbstractFactory{
      */
     public function createCategory($title, $description)
     {
-        new Boulanger\Category($title, $description);
+        return new Boulanger\Category($title, $description);
 
     }
 
