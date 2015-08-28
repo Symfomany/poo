@@ -22,35 +22,58 @@
         require __DIR__.'/vendor/autoload.php';
 
 
-        $product1 = new \App\Webservice\Product("Apple Watch", "Description de cette montre", 600);
-        $product2 = new \App\Webservice\Product("Apple iTV", "Description de cette TV", 2000);
 
+        $adapter = new \App\Facebook\FBUserAdapter(new \App\Facebook\FBUser());
 
-        $json = new \App\Webservice\RenderInJson($product1);
-        $xml = new \App\Webservice\RenderInXml($product1);
-        $bootsrapp = new \App\Webservice\RenderInBootstrap($product1);
-
-        dump($json->renderProduct(),$bootsrapp->renderProduct(), $xml->renderProduct());
+        dump($adapter->getImages());
 
 
 
-        $json = new \App\Webservice\RenderInJson($product2);
-        $xml = new \App\Webservice\RenderInXml($product2);
-        $bootsrapp = new \App\Webservice\RenderInBootstrap($product2);
+//        $product1 = new \App\Webservice\Product("Apple Watch", "Description de cette montre", 600);
+//        $product2 = new \App\Webservice\Product("Apple iTV", "Description de cette TV", 2000);
+//
+//
+//        $json = new \App\Webservice\RenderInJson($product1);
+//        $xml = new \App\Webservice\RenderInXml($product1);
+//        $bootsrapp = new \App\Webservice\RenderInBootstrap($product1);
+//
+//        dump($json->renderProduct(),$bootsrapp->renderProduct(), $xml->renderProduct());
+//
+//
+//
+//        $json = new \App\Webservice\RenderInJson($product2);
+//        $xml = new \App\Webservice\RenderInXml($product2);
+//        $bootsrapp = new \App\Webservice\RenderInBootstrap($product2);
+//
+//        dump($json->renderProduct(), $xml->renderProduct(), $bootsrapp->renderProduct());
+//
+//
+////        dump($json->getWrapped()->renderProduct());
+//
+//        $marque1 = new \App\Webservice\Marques("Nike", "Tous les vetements Nike");
+//        $marque2 = new \App\Webservice\Marques("Adidas", "Tous les vetements Adidas");
+//
+//        $json = new \App\Webservice\RenderInJson($marque1);
+//        $xml = new \App\Webservice\RenderInXml($marque1);
+//        $bootsrapp = new \App\Webservice\RenderInBootstrap($marque1);
+//
+////        $extras = new \App\Webservice\RenderInBootstrap(
+////                        new \App\Webservice\RenderInBold(
+////                            $marque1
+////                        ));
+//$extras2 = new \App\Webservice\RenderInBootstrap(
+//                new \App\Webservice\RenderInBold(
+//                        new \App\Webservice\RenderInChainable(
+//                    $product1
+//))
+//);
+//
+//        echo $extras2->renderProduct();
 
-        dump($json->renderProduct(), $xml->renderProduct(), $bootsrapp->renderProduct());
 
 
-//        dump($json->getWrapped()->renderProduct());
-
-        $marque1 = new \App\Webservice\Marques("Nike", "Tous les vetements Nike");
-        $marque2 = new \App\Webservice\Marques("Adidas", "Tous les vetements Adidas");
-
-        $json = new \App\Webservice\RenderInJson($marque1);
-        $xml = new \App\Webservice\RenderInXml($marque1);
-        $bootsrapp = new \App\Webservice\RenderInBootstrap($marque1);
-
-        dump($json->renderProduct(), $xml->renderProduct(), $bootsrapp->renderProduct());
+//        echo $extras->renderProduct();
+//        dump($json->renderProduct(), $xml->renderProduct(), $bootsrapp->renderProduct());
 
 
 

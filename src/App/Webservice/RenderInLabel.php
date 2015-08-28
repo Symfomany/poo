@@ -6,7 +6,7 @@ use App\Webservice\AbstractDecorator;
 /**
  * Class RenderInJson
  */
-class RenderInBootstrap extends AbstractDecorator
+class RenderInChainable extends AbstractDecorator
 {
 
     /**
@@ -17,8 +17,8 @@ class RenderInBootstrap extends AbstractDecorator
     public function renderProduct()
     {
         $output = $this->wrapped->renderProduct();
-        dump($output);
 
-        return "<div class='alert alert-success'>{$output}</div>";
+        $html = "<span class='label label-default'>{$output}</span>";
+
     }
 }
