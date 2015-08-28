@@ -22,11 +22,53 @@
         require __DIR__.'/vendor/autoload.php';
 
 
-        $manager = new \App\Commercial\Manager();
+        $product1 = new \App\Webservice\Product("Apple Watch", "Description de cette montre", 600);
+        $product2 = new \App\Webservice\Product("Apple iTV", "Description de cette TV", 2000);
+
+
+        $json = new \App\Webservice\RenderInJson($product1);
+        $xml = new \App\Webservice\RenderInXml($product1);
+
+        dump($json->renderProduct(), $xml->renderProduct());
+
+
+
+        $json = new \App\Webservice\RenderInJson($product2);
+        $xml = new \App\Webservice\RenderInXml($product2);
+
+        dump($json->renderProduct(), $xml->renderProduct());
+
+
+
+//        $samsungfactory = new \App\Smartphone\SamsungFactory();
+//        $applefactory = new \App\Smartphone\AppleFactory();
+//        $sonyfactory = new \App\Smartphone\SonyFactory();
+//
+//        $smartphone1 = $samsungfactory->createSmartphone(1,"gris", 16, 320);
+//        $smartphone2 = $samsungfactory->createSmartphone(1,"bleue", 32, 320);
+//        $smartphone3 = $applefactory->createSmartphone(1,"vert", 16, 320);
+//        $smartphone4 = $applefactory->createSmartphone(1,"noir", 32, 320);
+//        $smartphone5 = $sonyfactory->createSmartphone(1,"noir", 16, 320);
+//        $smartphone6 = $sonyfactory->createSmartphone(1,"noir", 32, 320);
+//
+//        dump($smartphone1,
+//            $smartphone2,
+//            $smartphone3,
+//            $smartphone4,
+//            $smartphone5,
+//            $smartphone6);
+
+//        $anonym = function(\App\Smartphone\SmartphoneInterface $smartphone,  $couleur, $capacite, $poid){
+//                new $smartphone( $couleur, $capacite, $poid);
+//        };
+//
+//        dump($anonym(new \App\Smartphone\Iphone4S(1,"noir", 32, 320)));
+
+        /*$manager = new \App\Commercial\Manager();
 
         $product = $manager->build(new \App\Commercial\ProductBuilder());
 
-        dump($product);
+        dump($product);*/
 
 
 //        $darty = new \App\Export\DartyFactory();
