@@ -16,6 +16,25 @@ abstract class AbstractDecorator implements RendererInterface{
         $this->wrapped = $wrapped;
     }
 
+    /**
+     * @return RendererInterface
+     */
+    public function getWrapped()
+    {
+        return $this->wrapped;
+    }
+
+    /**
+     * @param RendererInterface $wrapped
+     */
+    public function setWrapped($wrapped)
+    {
+        $this->wrapped = $wrapped;
+    }
+
+
+
+
 
 
 

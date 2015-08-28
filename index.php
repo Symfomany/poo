@@ -36,6 +36,10 @@
         $json = new \App\Webservice\RenderInJson($product2);
         $xml = new \App\Webservice\RenderInXml($product2);
 
+        dump($json->getWrapped()->renderProduct());
+
+
+
         dump($json->renderProduct(), $xml->renderProduct());
 
 
