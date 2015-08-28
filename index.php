@@ -22,11 +22,6 @@
         require __DIR__.'/vendor/autoload.php';
 
 
-        use App\Promotions;
-        use App\Actors as Actor;
-        use App\User;
-
-
         $manager = new \App\Commercial\Manager();
 
         $product = $manager->build(new \App\Commercial\ProductBuilder());
