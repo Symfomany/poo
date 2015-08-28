@@ -28,23 +28,37 @@
 
         $json = new \App\Webservice\RenderInJson($product1);
         $xml = new \App\Webservice\RenderInXml($product1);
+        $bootsrapp = new \App\Webservice\RenderInBootstrap($product1);
 
-        dump($json->renderProduct(), $xml->renderProduct());
+        dump($json->renderProduct(),$bootsrapp->renderProduct(), $xml->renderProduct());
 
 
 
         $json = new \App\Webservice\RenderInJson($product2);
         $xml = new \App\Webservice\RenderInXml($product2);
+        $bootsrapp = new \App\Webservice\RenderInBootstrap($product2);
 
-        dump($json->getWrapped()->renderProduct());
-
-
-
-        dump($json->renderProduct(), $xml->renderProduct());
+        dump($json->renderProduct(), $xml->renderProduct(), $bootsrapp->renderProduct());
 
 
+//        dump($json->getWrapped()->renderProduct());
 
-//        $samsungfactory = new \App\Smartphone\SamsungFactory();
+        $marque1 = new \App\Webservice\Marques("Nike", "Tous les vetements Nike");
+        $marque2 = new \App\Webservice\Marques("Adidas", "Tous les vetements Adidas");
+
+        $json = new \App\Webservice\RenderInJson($marque1);
+        $xml = new \App\Webservice\RenderInXml($marque1);
+        $bootsrapp = new \App\Webservice\RenderInBootstrap($marque1);
+
+        dump($json->renderProduct(), $xml->renderProduct(), $bootsrapp->renderProduct());
+
+
+
+
+
+
+
+        //        $samsungfactory = new \App\Smartphone\SamsungFactory();
 //        $applefactory = new \App\Smartphone\AppleFactory();
 //        $sonyfactory = new \App\Smartphone\SonyFactory();
 //

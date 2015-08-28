@@ -4,22 +4,20 @@ namespace App\Webservice;
 
 
 /**
- * Class Product
+ * Class Marques
  */
-class Product implements RendererInterface
+class Marques implements RendererInterface
 {
 
     protected $title;
 
     protected $description;
 
-    protected $prix;
 
 
-    public function __construct($title, $description, $prix){
+    public function __construct($title, $description){
         $this->title = $title;
         $this->description = $description;
-        $this->prix = $prix;
     }
 
 
@@ -27,7 +25,6 @@ class Product implements RendererInterface
 
         return array(
             "title" => $this->title,
-            "prix" => $this->prix
         );
     }
 
@@ -62,25 +59,6 @@ class Product implements RendererInterface
     {
         $this->description = $description;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getPrix()
-    {
-        return $this->prix;
-    }
-
-    /**
-     * @param mixed $prix
-     */
-    public function setPrix($prix)
-    {
-        $this->prix = $prix;
-    }
-
-
-
 
 
 }

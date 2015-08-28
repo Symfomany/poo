@@ -6,7 +6,7 @@ use App\Webservice\AbstractDecorator;
 /**
  * Class RenderInJson
  */
-class RenderInXml extends AbstractDecorator
+class RenderInBootstrap extends AbstractDecorator
 {
 
     /**
@@ -18,12 +18,6 @@ class RenderInXml extends AbstractDecorator
     {
         $output = $this->wrapped->renderProduct();
 
-        $doc = new \DOMDocument();
-
-        foreach ($output as $key => $val) {
-            $doc->appendChild($doc->createElement($key, $val));
-        }
-
-        return $doc->saveXML();
+        return "<div class='alert alert-success'>{$output['title']}</div>";
     }
 }
